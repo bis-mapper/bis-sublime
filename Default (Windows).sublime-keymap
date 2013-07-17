@@ -1,0 +1,11 @@
+[
+    {
+        "keys": ["ctrl+shift+x"], "command": "bis_bug"
+    },
+    {
+        "keys": ["ctrl+shift+o"], "command": "bis_ctrl"
+    },
+    {
+        "keys": ["ctrl+shift+h"], "command": "help"
+    }
+]
