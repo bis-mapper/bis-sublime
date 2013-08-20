@@ -127,7 +127,8 @@
             "scope": "markup.raw",
             "settings": {
                 "background": "#4C4C4C",
-                "foreground": "#CC7833"
+                "foreground": "#fff",
+                "fontStyle": "strong"
             }
         },
         {
@@ -144,6 +145,10 @@
             "settings": {
                 "fontStyle": "",
                 "foreground": "#E6E1DC"
+
+
+ajksdfaskldfjasdfklj
+asldjfalskdjfklajsdf
             }
         },
         {

@@ -1,0 +1,13 @@
+{
+  "default_encoding": "UTF-8",
+  "draw_white_space": "all",
+  "highlight_line": true,
+  "rulers":
+  [
+    80,
+    100,
+    132
+  ],
+  "tab_size": 1,
+  "trim_trailing_white_space_on_save": true
+}

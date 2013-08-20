@@ -59,7 +59,7 @@
     "types": {
       "patterns": [
         {
-          "match": "(\\¬|\\'¬')",
+          "match": "(\\¬|\\'¬'|\\t)",
           "name": "markup.raw.bis"
         },
         {

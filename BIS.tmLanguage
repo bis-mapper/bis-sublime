@@ -225,7 +225,7 @@
 			<array>
 				<dict>
 					<key>match</key>
-					<string>(\¬|\'¬')</string>
+					<string>(\¬|\'¬'|\t)</string>
 					<key>name</key>
 					<string>markup.raw.bis</string>
 				</dict>

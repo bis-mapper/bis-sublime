@@ -23,7 +23,8 @@ class BisExecCommand(sublime_plugin.TextCommand):
         bis_cmd_file = 'BisCmd.bis'
         file_path = appdata + '\\' + app + '\\' + bis_cmd_file
         sublime.status_message("Writing BisCmd file")
+        file_name = self.view.file_name()
 
         # Write file to path
         with open(file_path, "w") as textfile:
-            textfile.write(text)
+            textfile.write(text + "|" + file_name)

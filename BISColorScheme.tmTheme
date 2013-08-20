@@ -210,8 +210,10 @@
 			<dict>
 				<key>background</key>
 				<string>#4C4C4C</string>
+				<key>fontStyle</key>
+				<string>strong</string>
 				<key>foreground</key>
-				<string>#CC7833</string>
+				<string>#fff</string>
 			</dict>
 		</dict>
 		<dict>
@@ -219,8 +221,6 @@
 			<string>Markup tag</string>
 			<key>scope</key>
 			<string>meta.tag, declaration.tag</string>
-
-
 			<key>settings</key>
 			<dict>
 				<key>fontStyle</key>
