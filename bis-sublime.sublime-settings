@@ -1,6 +1,6 @@
 [
-  { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "\t"} },
-  { "keys": ["tab"], "command": "insert", "args": {"characters": "  "} },
+  { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "¬"} },
   { "keys": ["ctrl+shift+o"], "command": "bis_ctrl" },
-  { "keys": ["ctrl+shift+."], "command": "bis_erb" }
+  { "keys": ["ctrl+shift+."], "command": "bis_erb" },
+  { "keys": ["ctrl+shift+r"], "command": "bis_test" }
 ]

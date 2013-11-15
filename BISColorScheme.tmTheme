@@ -209,11 +209,11 @@
 			<key>settings</key>
 			<dict>
 				<key>background</key>
-				<string>#4C4C4C</string>
+				<string>#43403C</string>
 				<key>fontStyle</key>
 				<string>strong</string>
 				<key>foreground</key>
-				<string>#fff</string>
+				<string>#993399</string>
 			</dict>
 		</dict>
 		<dict>

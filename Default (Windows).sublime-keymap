@@ -7,5 +7,7 @@
     },
     {
         "keys": ["ctrl+shift+h"], "command": "help"
-    }
+    },
+    { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "\t"} },
+    { "keys": ["tab"], "command": "insert", "args": {"characters": "  "} }
 ]
