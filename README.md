@@ -55,4 +55,4 @@ More to come on this...
 
 ## To Enable Color Scheme
 
-`Preferences -> Color Scheme -> bis-sublime -> BisColorScheme
+Preferences -> Color Scheme -> bis-sublime -> BisColorScheme
