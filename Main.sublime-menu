@@ -17,12 +17,12 @@
                         [
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/bis-sublime/bis-sublime.sublime-settings"},
+                                "args": {"file": "${packages}/bis-sublime/BIS.sublime-settings"},
                                 "caption": "Settings – Default"
                             },
                             {
                                 "command": "open_file",
-                                "args": {"file": "${packages}/User/bis-sublime.sublime-settings"},
+                                "args": {"file": "${packages}/User/BIS.sublime-settings"},
                                 "caption": "Settings – User"
                             },
                             {

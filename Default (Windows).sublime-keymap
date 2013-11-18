@@ -1,13 +1,6 @@
 [
-    {
-        "keys": ["ctrl+shift+x"], "command": "bis_bug"
-    },
-    {
-        "keys": ["ctrl+shift+o"], "command": "bis_ctrl"
-    },
-    {
-        "keys": ["ctrl+shift+h"], "command": "help"
-    },
-    { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "\t"} },
-    { "keys": ["tab"], "command": "insert", "args": {"characters": "  "} }
+  { "keys": ["ctrl+shift+o"], "command": "bis_ctrl" },
+  { "keys": ["ctrl+shift+."], "command": "bis_erb" },
+  { "keys": ["ctrl+shift+h"], "command": "help"},
+  { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "¬"} }
 ]
