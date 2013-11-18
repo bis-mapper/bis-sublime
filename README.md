@@ -43,7 +43,7 @@ Help: `ctrl + shift + h`
 
 (Highlight the word/command that you want help with, works for MAPPER commands and html tags)
 
-Template Helper: `ctrl + shift +.`
+Template Helper: `ctrl + shift + .`
 
 (This will automatically wrap your variables with <% &lt;var&gt;(p) %>)
 
