@@ -107,7 +107,7 @@
         "numbers": {
             "patterns": [
                 {
-                    "match": "(?x:         # turn on extended mode\n\t\t\t             -?         # an optional minus\n\t\t\t             (?:\n\t\t\t               0        # a zero\n\t\t\t               |        # ...or...\n\t\t\t               [1-9]    # a 1-9 character\n\t\t\t               \\d*      # followed by zero or more digits\n\t\t\t             )\n\t\t\t             (?:\n\t\t\t               (?:\n\t\t\t                 \\.     # a period\n\t\t\t                 \\d+    # followed by one or more digits\n\t\t\t               )?\n\t\t\t               (?:\n\t\t\t                 [eE]   # an e character\n\t\t\t                 [+-]?  # followed by an option +/-\n\t\t\t                 \\d+    # followed by one or more digits\n\t\t\t               )?       # make exponent optional\n\t\t\t             )?         # make decimal portion optional\n\t\t\t           )",
+                    "match": "(?x:         # turn on extended mode\n                         -?         # an optional minus\n                         (?:\n                           0        # a zero\n                           |        # ...or...\n                           [1-9]    # a 1-9 character\n                           \\d*      # followed by zero or more digits\n                         )\n                         (?:\n                           (?:\n                             \\.     # a period\n                             \\d+    # followed by one or more digits\n                           )?\n                           (?:\n                             [eE]   # an e character\n                             [+-]?  # followed by an option +/-\n                             \\d+    # followed by one or more digits\n                           )?       # make exponent optional\n                         )?         # make decimal portion optional\n                       )",
                     "name": "constant.numeric.bis"
                 }
             ]
@@ -159,8 +159,13 @@
         "variables": {
             "patterns": [
                 {
-                    "comment": "<+[^/]{1,12}>{1}",
-                    "match": "(<+)([^/(?i:script|address|blockquote|dd|div|header|section|footer|aside|nav|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre|a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt)][\\d\\s\\w]+)(>)",
+                    "comment": "(<+)((?!i:/|script|address|blockquote|dd|div|header|section|footer|aside|nav|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre|a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|style|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt)[\\d\\s\\w]+)(>)",
+                    "match": "<+[^\\s/]{1,12}>{1}",
+                    "name": "variable.language.bis"
+                },
+                {
+                    "begin": "<%",
+                    "end": "%>",
                     "name": "variable.language.bis"
                 }
             ]
