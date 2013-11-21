@@ -5,7 +5,7 @@ import os
 
 class BisCtrlCommand(sublime_plugin.WindowCommand):
     def run(self):
-        self.window.show_input_panel("MAPPER Control Line:", "", self.on_done, None, None)
+        self.window.show_input_panel("BIS Control Line:", "", self.on_done, None, None)
         pass
 
     def on_done(self, text):

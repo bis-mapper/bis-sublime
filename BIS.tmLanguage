@@ -10,7 +10,7 @@
         <string>inf</string>
         <string>map</string>
         <string>txt</string>
-        <string>diff</string>
+        <string>bisdiff</string>
     </array>
     <key>name</key>
     <string>BIS</string>
