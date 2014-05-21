@@ -8,6 +8,7 @@
   ],
   "tab_size": 2,
   "trim_trailing_white_space_on_save": true,
+  "translate_tabs_to_spaces": true,
   "word_wrap": false,
   "filename_filter": "(?i)\\.(bis|bhtml|run|txt)$"
 }

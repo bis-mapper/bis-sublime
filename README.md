@@ -1,19 +1,15 @@
 
-# bis-sublime-package
+# bis-sublime plugin
 
 <img src="https://raw.github.com/bis-mapper/bis-sublime/master/examples/bis-sublime.png" border="0">
 
 ## Requirements
 
-In order to use this you must first install Sublime Text and Package Control.
-
-[Sublime Text](http://www.sublimetext.com/3)
-
-[Package Control](https://sublime.wbond.net/installation)
+Please make sure you follow the [installation intstructions](https://github.com/bis-mapper/sublwatcher) first.
 
 ## Add remote repository
 
-Once you have everything installed add the following repositories enter the following commands:
+Follow the commands below to get the syntax files and utilities configured:
 
 * Type `ctrl + shift + p`
 
@@ -51,7 +47,6 @@ Template Helper: `ctrl + shift + .`
 ## Tab conversion
 
 Tabs don't work well in most text editors so they need to be converted to character ¬ (CHR$254)
-More to come on this...
 
 ## To Enable Color Scheme
 
