@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+cah,${1:cab},${2:drw},${3:rpt} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cah</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@cah cache report command</description>
+</snippet>

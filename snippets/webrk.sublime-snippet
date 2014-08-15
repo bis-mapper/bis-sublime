@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+brk,0,f,,y .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>brk</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@brk webscript</description>
+</snippet>
