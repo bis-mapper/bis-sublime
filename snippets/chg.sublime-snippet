@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+chg ${1:v} ${2:{exp|vld\}} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>chg</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@chg change expression</description>
+</snippet>
