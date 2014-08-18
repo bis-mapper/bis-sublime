@@ -1,5 +1,6 @@
 import sublime
 import sublime_plugin
+import re
 import os
 
 
@@ -18,12 +19,18 @@ class BisExecCommand(sublime_plugin.TextCommand):
     def run(self, edit, text):
 
         # Get Path and User variables
+        global_settings = sublime.load_settings('BIS.sublime-settings')
         appdata = os.environ['USERPROFILE']
         app = 'sublwatcher'
         bis_cmd_file = 'changes.txt'
         file_path = appdata + '\\' + app + '\\' + bis_cmd_file
         sublime.status_message("Writing BisCmd file")
         file_name = self.view.file_name()
+        filename_filter = global_settings.get('filename_filter', '.*')
+        print("Filename filter" + filename_filter)
+
+        if not re.search(filename_filter, file_name):
+            file_name = appdata + '\\' + app + '\\'
 
         # Write file to path
         with open(file_path, "w") as textfile:
