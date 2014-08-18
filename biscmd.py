@@ -29,6 +29,7 @@ class BisExecCommand(sublime_plugin.TextCommand):
         filename_filter = global_settings.get('filename_filter', '.*')
         print("Filename filter" + filename_filter)
 
+        # If non mapper file is on display default to sublwatcher app path
         if not re.search(filename_filter, file_name):
             file_name = appdata + '\\' + app + '\\'
 

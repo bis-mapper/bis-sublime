@@ -30,10 +30,6 @@ class BisSaveBuild(sublime_plugin.EventListener):
         bis_save_file = 'changes.txt'
         file_path = appdata + '\\' + app + '\\' + bis_save_file
         file_name = view.file_name()
-        # print(file_name)
-        # pos = file_name.find('site-')
-        # pos = pos + 5
-        # site = file_name[pos]
 
         # Write file to path
         with open(file_path, "w") as textfile:

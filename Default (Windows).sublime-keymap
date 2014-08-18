@@ -1,6 +1,6 @@
 [
   { "keys": ["ctrl+shift+o"], "command": "bis_ctrl" },
   { "keys": ["ctrl+shift+."], "command": "bis_erb" },
-  { "keys": ["ctrl+shift+h"], "command": "help"},
+  { "keys": ["ctrl+shift+h"], "command": "bis_help"},
   { "keys": ["ctrl+t"], "command": "insert", "args": {"characters": "¬"} }
 ]

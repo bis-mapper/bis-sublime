@@ -3,7 +3,7 @@ import os.path
 import subprocess
 import webbrowser
 
-class helpCommand(sublime_plugin.TextCommand):
+class BisHelpCommand(sublime_plugin.TextCommand):
   def run(self, edit):
     for region in self.view.sel():
         flag = 'true'
