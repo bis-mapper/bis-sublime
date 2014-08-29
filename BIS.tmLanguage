@@ -24,11 +24,11 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#variables</string>
+			<string>#ice-tags</string>
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#ice-tags</string>
+			<string>#variables</string>
 		</dict>
 		<dict>
 			<key>include</key>

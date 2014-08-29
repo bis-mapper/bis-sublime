@@ -55,6 +55,14 @@
             }
         },
         {
+            "name": "Report Data",
+            "scope": "report.data",
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#00FFFF"
+            }
+        },
+        {
             "name": "Variable",
             "scope": "variable.language, variable.other",
             "settings": {
