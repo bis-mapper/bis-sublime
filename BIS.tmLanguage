@@ -355,7 +355,7 @@
 					<array>
 						<dict>
 							<key>begin</key>
-							<string>(&lt;/?)((?i:address|blockquote|dd|div|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre)\b)</string>
+							<string>(&lt;/?)((?i:address|blockquote|body|dd|div|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|object|ol|p|ul|applet|center|dir|hr|menu|pre)\b)</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
@@ -659,7 +659,9 @@
 					<key>comment</key>
 					<string>Highlight these line types with classic cyan MAPPER color</string>
 					<key>end</key>
-					<string>(\r|\n|¬)</string>
+					<string>((
+|
+|\r|\n|¬|@)|(?=^@))</string>
 					<key>endCaptures</key>
 					<dict>
 						<key>0</key>
@@ -685,7 +687,8 @@
 					<key>comment</key>
 					<string>Highlight tab lines leaving the tab color intact</string>
 					<key>end</key>
-					<string>(\r|\n)</string>
+					<string>(
+)</string>
 					<key>name</key>
 					<string>report.data.bis</string>
 					<key>patterns</key>
