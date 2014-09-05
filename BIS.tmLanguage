@@ -20,6 +20,10 @@
 		</dict>
 		<dict>
 			<key>include</key>
+			<string>#comments</string>
+		</dict>
+		<dict>
+			<key>include</key>
 			<string>#diff</string>
 		</dict>
 		<dict>
@@ -29,10 +33,6 @@
 		<dict>
 			<key>include</key>
 			<string>#variables</string>
-		</dict>
-		<dict>
-			<key>include</key>
-			<string>#comments</string>
 		</dict>
 		<dict>
 			<key>include</key>
@@ -161,6 +161,21 @@
 					</dict>
 					<key>name</key>
 					<string>comment.multiline.bis</string>
+				</dict>
+				<dict>
+					<key>begin</key>
+					<string>(\s{1}\.{1}\s{3,})(.+)</string>
+					<key>beginCaptures</key>
+					<dict>
+						<key>2</key>
+						<dict>
+							<key>name</key>
+							<string>comment.multiline.bis</string>
+						</dict>
+					</dict>
+					<key>end</key>
+					<string>
+</string>
 				</dict>
 			</array>
 		</dict>
@@ -391,7 +406,7 @@
 						</dict>
 						<dict>
 							<key>begin</key>
-							<string>(&lt;/?)((?i:a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|select|small|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u|var)\b)</string>
+							<string>(&lt;/?)((?i:a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|em|font|head|html|i|img|input|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|select|small|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt|u)\b)</string>
 							<key>beginCaptures</key>
 							<dict>
 								<key>1</key>
@@ -610,6 +625,23 @@
 				</dict>
 			</array>
 		</dict>
+		<key>ice-vars</key>
+		<dict>
+			<key>begin</key>
+			<string>&lt;%</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>variable.other.bis</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>%&gt;</string>
+			<key>name</key>
+			<string>variable.other.bis</string>
+		</dict>
 		<key>numbers</key>
 		<dict>
 			<key>patterns</key>
@@ -748,6 +780,10 @@
 				<dict>
 					<key>include</key>
 					<string>#entities</string>
+				</dict>
+				<dict>
+					<key>include</key>
+					<string>#ice-vars</string>
 				</dict>
 			</array>
 		</dict>
