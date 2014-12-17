@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+call,NSEXTASSETS_ 0011 ('Stylesheet','${1:file}','') .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NSEXTASSETS_ </tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Load external css file</description>
+</snippet>

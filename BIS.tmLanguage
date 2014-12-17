@@ -44,10 +44,6 @@
 		</dict>
 		<dict>
 			<key>include</key>
-			<string>#variable-types</string>
-		</dict>
-		<dict>
-			<key>include</key>
 			<string>#defines</string>
 		</dict>
 		<dict>

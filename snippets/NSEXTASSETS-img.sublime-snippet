@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+call,NSEXTASSETS_ 0051 ('${1:file}', ${2:<imgsrc>s256}, ${3:<imgwidth>h6}, ${4:<imgheight>h6},'') .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NSEXTASSETS_ </tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Load external img src, height, width</description>
+</snippet>

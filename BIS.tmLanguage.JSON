@@ -30,9 +30,6 @@
             "include": "#strings"
         },
         {
-            "include": "#variable-types"
-        },
-        {
             "include": "#defines"
         },
         {

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+rsr,NSCONFIG_ 0001 .                                                    Loads global variables
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NSCONFIG_ </tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Loads global vars</description>
+</snippet>
