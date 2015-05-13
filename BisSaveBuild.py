@@ -27,13 +27,14 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Get Path and User variables
         appdata = os.environ['USERPROFILE']
         app = 'sublwatcher'
-        bis_save_file = 'changes.txt'
-        file_path = appdata + '\\' + app + '\\' + bis_save_file
         file_name = view.file_name()
-        # print(file_name)
-        # pos = file_name.find('site-')
-        # pos = pos + 5
-        # site = file_name[pos]
+        pos = file_name.find('site-')
+        pos = pos + 5
+        site = file_name[pos]
+        bis_save_file = 'site-' + site +'\\changes.txt'
+        file_path = appdata + '\\' + app + '\\' + bis_save_file
+
+
 
         # Write file to path
         with open(file_path, "w") as textfile:
