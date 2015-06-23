@@ -24,10 +24,6 @@
     </dict>
     <dict>
       <key>include</key>
-      <string>#drawers</string>
-    </dict>
-    <dict>
-      <key>include</key>
       <string>#comments</string>
     </dict>
     <dict>
@@ -233,18 +229,6 @@
           <string>^(.&gt;+)</string>
           <key>name</key>
           <string>markup.inserted</string>
-        </dict>
-      </array>
-    </dict>
-    <key>drawers</key>
-    <dict>
-      <key>patterns</key>
-      <array>
-        <dict>
-          <key>match</key>
-          <string>,+(?i:a|b|c|d|e|f|g|h|i)?(,|\s)</string>
-          <key>name</key>
-          <string>constant.numeric.bis</string>
         </dict>
       </array>
     </dict>

@@ -15,9 +15,6 @@
             "include": "#report-data"
         },
         {
-            "include": "#drawers"
-        },
-        {
             "include": "#comments"
         },
         {
@@ -251,7 +248,7 @@
             "patterns": [
                 {
                     "comment": "(<+)((?!i:/|script|address|blockquote|dd|div|header|section|footer|aside|nav|dl|dt|fieldset|form|frame|frameset|h1|h2|h3|h4|h5|h6|iframe|noframes|ol|p|ul|applet|center|dir|hr|menu|pre|a|abbr|acronym|area|b|base|basefont|bdo|big|br|button|caption|cite|code|col|colgroup|del|dfn|em|font|head|html|i|img|input|ins|isindex|kbd|label|legend|li|link|map|meta|noscript|optgroup|option|param|q|s|samp|script|select|small|span|strike|strong|sub|sup|table|tbody|td|textarea|tfoot|th|thead|title|tr|tt)[\\d\\s\\w]+)(>)",
-                    "match": "<+.{1,12}>{1}",
+                    "match": "<+[a-zA-Z0-9\\s#%@!~`^&*+=]{1,12}>{1}",
                     "name": "variable.language.bis"
                 }
             ]
@@ -640,14 +637,6 @@
                 },
                 {
                     "include": "#string-single-quoted"
-                }
-            ]
-        },
-        "drawers": {
-            "patterns": [
-                {
-                    "match": ",+(?i:a|b|c|d|e|f|g|h|i)?(,|\\s)",
-                    "name": "constant.numeric.bis"
                 }
             ]
         }

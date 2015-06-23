@@ -1,0 +1,6 @@
+{
+  "cmd": ["build", "$file", "$project_base_name", "debug: $project"],
+  "shell": true,
+  "selector": "source.BIS",
+  "working_dir": "d://users//winne//sublwatcher//"
+}

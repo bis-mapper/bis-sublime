@@ -1,50 +1,208 @@
 [
     {
         "caption": "Preferences",
-        "mnemonic": "n",
-        "id": "preferences",
-        "children":
-        [
+        "children": [
             {
                 "caption": "Package Settings",
-                "mnemonic": "P",
-                "id": "package-settings",
-                "children":
-                [
+                "children": [
                     {
                         "caption": "bis-sublime",
-                        "children":
-                        [
+                        "children": [
                             {
-                                "command": "open_file",
-                                "args": {"file": "${packages}/bis-sublime/BIS.sublime-settings"},
-                                "caption": "Settings – Default"
-                            },
-                            {
-                                "command": "open_file",
-                                "args": {"file": "${packages}/User/BIS.sublime-settings"},
-                                "caption": "Settings – User"
-                            },
-                            {
-                                "command": "open_file",
                                 "args": {
-                                        "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
-                                        "platform": "Windows"
+                                    "file": "${packages}/bis-sublime/BIS.sublime-settings"
                                 },
-                                "caption": "Key Bindings – Default"
+                                "caption": "Settings \u2013 Default",
+                                "command": "open_file"
                             },
                             {
-                                "command": "open_file",
                                 "args": {
-                                        "file": "${packages}/User/Default (Windows).sublime-keymap",
-                                        "platform": "Windows"
+                                    "file": "${packages}/User/BIS.sublime-settings"
                                 },
-                                "caption": "Key Bindings – User"
+                                "caption": "Settings \u2013 User",
+                                "command": "open_file"
+                            },
+                            {
+                                "args": {
+                                    "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings \u2013 Default",
+                                "command": "open_file"
+                            },
+                            {
+                                "args": {
+                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings \u2013 User",
+                                "command": "open_file"
                             }
                         ]
                     }
+                ],
+                "id": "package-settings",
+                "mnemonic": "P"
+            }
+        ],
+        "id": "preferences",
+        "mnemonic": "n"
+    },
+    {
+        "caption": "SUBLWATCHER",
+        "children": [
+            {
+                "args": {
+                    "platform": "Windows"
+                },
+                "caption": "Build Application",
+                "command": "build",
+                "mnemonic": "n",
+                "id": "build"
+            },
+            {
+                "caption": "Export Application",
+                "command": "export",
+                "mnemonic": "n",
+                "id": "export"
+            },
+            {
+                "caption": "Git commands",
+                "children": [
+                    {
+                        "caption": "Git status",
+                        "command": "git_status",
+                        "mnemonic": "n",
+                        "id": "git status"
+                    },
+                    {
+                        "caption": "Git push",
+                        "command": "git_push",
+                        "mnemonic": "n",
+                        "id": "git push"
+                    },
+                    {
+                        "caption": "Git pull",
+                        "command": "git_pull",
+                        "mnemonic": "n",
+                        "id": "git pull"
+                    },
+                    {
+                        "caption": "Git push frontend",
+                        "command": "git_custom",
+                        "args": {
+                            "cmd": "subtree push --prefix=app/frontend --squash frontend master"
+                        },
+                        "mnemonic": "n",
+                        "id": "git pull"
+                    },
+                    {
+                        "caption": "Git pull frontend",
+                        "command": "git_custom",
+                        "args": {
+                            "cmd": "subtree pull --prefix=app/frontend --squash frontend master"
+                        },
+                        "mnemonic": "n",
+                        "id": "git pull"
+                    },
+                    {
+                        "caption": "Git push ice_modules",
+                        "command": "git_custom",
+                        "args": {
+                            "cmd": "subtree push --prefix=lib/external/ice_modules --squash ice_modules master"
+                        },
+                        "mnemonic": "n",
+                        "id": "git pull"
+                    },
+                    {
+                        "caption": "Git pull ice_modules",
+                        "command": "git_custom",
+                        "args": {
+                            "cmd": "subtree pull --prefix=lib/external/ice_modules --squash ice_modules master"
+                        },
+                        "mnemonic": "n",
+                        "id": "git pull"
+                    }
+                ]
+            },
+            {
+                "caption": "Gulp",
+                "command": "gulp",
+                "mnemonic": "n",
+                "id": "gulp"
+            },
+            {
+                "caption": "Deploy Application"
+            },
+            {
+                "caption": "Settings",
+                "children": [
+                    {
+                        "args": {
+                            "file": "${packages}/bis-sublime/BIS.sublime-settings"
+                        },
+                        "caption": "Settings \u2013 Default",
+                        "command": "open_file"
+                    },
+                    {
+                        "args": {
+                            "file": "${packages}/User/BIS.sublime-settings"
+                        },
+                        "caption": "Settings \u2013 User",
+                        "command": "open_file"
+                    },
+                    {
+                        "args": {
+                            "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
+                            "platform": "Windows"
+                        },
+                        "caption": "Key Bindings \u2013 Default",
+                        "command": "open_file"
+                    },
+                    {
+                        "args": {
+                            "file": "${packages}/User/Default (Windows).sublime-keymap",
+                            "platform": "Windows"
+                        },
+                        "caption": "Key Bindings \u2013 User",
+                        "command": "open_file"
+                    }
                 ]
             }
-        ]
+        ],
+        "id": "sublwatcher",
+        "mnemonic": "n"
+    },
+    {
+        "caption": "ICEBUILD",
+        "children": [
+            {
+                "caption": "New",
+                "children": [
+                    {
+                        "caption": "Application",
+                        "command": "git_status",
+                        "mnemonic": "n",
+                        "id": "git status"
+                    },
+                    {
+                        "caption": "Resource",
+                        "command": "new_resource",
+                        "mnemonic": "n",
+                        "id": "IBLD new resource"
+                    },
+                ]
+            },
+            {
+                "caption": "Delete",
+                "children": [
+                    {
+                        "caption": "Resource",
+                    }
+                ]
+            }
+        ],
+        "id": "ibld",
+        "mnemonic": "n"
     }
 ]
