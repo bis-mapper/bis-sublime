@@ -22,8 +22,6 @@ class BisExecCommand(sublime_plugin.TextCommand):
         global_settings = sublime.load_settings('BIS.sublime-settings')
         appdata = os.environ['USERPROFILE']
         app = 'sublwatcher'
-        bis_cmd_file = 'changes.txt'
-        file_path = appdata + '\\' + app + '\\' + bis_cmd_file
         sublime.status_message("Writing BisCmd file")
         file_name = self.view.file_name()
         filename_filter = global_settings.get('filename_filter', '.*')
@@ -31,6 +29,13 @@ class BisExecCommand(sublime_plugin.TextCommand):
 
         if not re.search(filename_filter, file_name):
             file_name = appdata + '\\' + app + '\\'
+
+        pos = file_name.find('site-')
+        pos = pos + 5
+        site = file_name[pos]
+
+        bis_cmd_file = 'site-' + site +'\\changes.txt'
+        file_path = appdata + '\\' + app + '\\' + bis_cmd_file
 
         # Write file to path
         with open(file_path, "w") as textfile:

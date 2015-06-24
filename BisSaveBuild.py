@@ -28,9 +28,11 @@ class BisSaveBuild(sublime_plugin.EventListener):
         appdata = os.environ['USERPROFILE']
         app = 'sublwatcher'
         file_name = view.file_name()
+        # print(file_name)
         pos = file_name.find('site-')
         pos = pos + 5
         site = file_name[pos]
+
         bis_save_file = 'site-' + site +'\\changes.txt'
         file_path = appdata + '\\' + app + '\\' + bis_save_file
 
