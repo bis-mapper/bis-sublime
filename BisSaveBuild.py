@@ -36,10 +36,7 @@ class BisSaveBuild(sublime_plugin.EventListener):
         pos = pos + 5
         site = file_name[pos].upper()
         # print(site)
-        if site == 'A' or site == 'B' or site == 'C' or site == 'D':
-            bis_save_file = 'changes.txt'
-        else:
-            bis_save_file = 'site-' + site + '\\changes.txt'
+        bis_save_file = 'site-' + site + '\\changes.txt'
         file_path = appdata + '\\' + app + '\\' + bis_save_file
 
         # Write file to path
