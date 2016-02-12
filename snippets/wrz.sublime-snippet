@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+wrz,${1:cab},${2:drw},${3:line}[,${4:ntuid?},${5:psw}] '${6:field}' ${7:ltyp},${8:val} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wrz</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@WRZ - Write to Rpt 0</description>
+</snippet>

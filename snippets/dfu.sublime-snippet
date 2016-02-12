@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+dfu,${1:[label]} ${2:cab},${3:drw},${4:rpt} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>dfu</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DFU - Defer Updates</description>
+</snippet>

@@ -6,5 +6,5 @@ chg ${1:rw} ${2:v} .
   <tabTrigger>chg</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@chg change reserved word</description>
+  <description>@CHG - Reserved word</description>
 </snippet>

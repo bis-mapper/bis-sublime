@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-brk,0,f,,y .
+sch,[${1:date1},${2:time2}] ${3:runstmt} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>brk</tabTrigger>
+  <tabTrigger>sch</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@brk webscript</description>
+  <description>@SCH - Schedule Run Command</description>
 </snippet>

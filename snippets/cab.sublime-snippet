@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+cab,${1:cab},${2:drw} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>cab</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CAB - Cabinet Switch</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+dsx,${1:cab},${2:drw},${3:rpt},${4:[l]},${5:[tabp]},${6:[f]},,${7:[hold]},${8:[msg]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>dsx</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DSX - Display Report and Exit</description>
+</snippet>

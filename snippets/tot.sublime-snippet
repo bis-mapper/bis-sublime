@@ -6,5 +6,5 @@ tot,${1:cab},${2:drw},${3:rpt} '${4:opt}' '${5:fld}' '¬',${6:val} .
   <tabTrigger>tot</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@tot totalize command</description>
+  <description>@TOT - Totalize Command</description>
 </snippet>

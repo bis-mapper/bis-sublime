@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+lnd,${1:cab},${2:drw},${3:rpt},${4:line},${5:[q]},${6:[b]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lnd</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LND - Delete and Yank Line Command</description>
+</snippet>

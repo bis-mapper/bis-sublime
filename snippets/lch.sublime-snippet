@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+lch,${1:cab},${2:drw},${3:rpt},${4:[line]},${5:[label]} '${6:opts}' ${7:cc} ${8:tgtstr}/${9:replstr} ,${10:[vlines]},${11:[vrpt]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lch</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LCH - Locate and Change</description>
+</snippet>

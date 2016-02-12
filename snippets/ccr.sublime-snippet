@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+ccr ${1:vch} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ccr</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CCR - COM Client Release Instance</description>
+</snippet>

@@ -6,5 +6,5 @@ adr,${1:cab},${2:drw},[${3:rpt},${4:lab} ${5:vtitle}] .
   <tabTrigger>adr</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@adr add new rid command</description>
+  <description>@ADR - Add new report</description>
 </snippet>

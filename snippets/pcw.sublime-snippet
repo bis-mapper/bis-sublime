@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+pcw,${1:cab},${2:drw},${3:rpt},${4:[l]},${5:[label]},${6:[opt]} ${7:oname} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pcw</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PCW - MAPPER to PC Command</description>
+</snippet>

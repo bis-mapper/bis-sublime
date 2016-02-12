@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+pic,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[tf?]},${5:[oname]},${6:[vwh]},${7:[vert]},${8:[hort]},${9:[vsiz]},${10:[hsiz]},,${11:[o]},${12:[label]} ${13:caption} ${14:[vph]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pic</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PIC - Display Picture Command</description>
+</snippet>

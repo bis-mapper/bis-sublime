@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+rdc,${1:cab},${2:drw},${3:rpt}[,${4:line},${5:q},${6:ltyp},${7:label},${8:contin?}] ${9:cc} ${10:data} .
+<data>
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>rdc</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RDC - Read Continuous</description>
+</snippet>

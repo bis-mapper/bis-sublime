@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+rrn[,${1:lcab},${2:ldrw},${3:lrpt}] ${4:run}[,${5:vld}] ${6:site},${7:ruser},${8:rdept}[,${9:rpwd},${10:rcab},${11:rdrw}] .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>rrn</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RRN - Remote Run Command</description>
+</snippet>

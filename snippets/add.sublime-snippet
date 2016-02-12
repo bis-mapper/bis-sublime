@@ -6,5 +6,5 @@ add,${1:icab},${2:idrw},${3:irpt},${4:rcab},${5:rdrw},${6:rrpt}
   <tabTrigger>add</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@add add results command</description>
+  <description>@ADD - Add Results</description>
 </snippet>

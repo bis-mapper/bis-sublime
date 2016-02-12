@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+run "${1:cmd}" .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>run</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RUN - Execute a Command</description>
+</snippet>

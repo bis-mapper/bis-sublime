@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+wat[,${1:M},${2:label}] ${3:ms} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>wat</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@WAT - Wait Command</description>
+</snippet>

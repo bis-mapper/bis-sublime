@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+dsp,${1:cab},${2:drw},${3:rpt},${4:[l]},${5:[tabp]},${6:[f]},${7:[interim?]},${8:[hold]},${9:[msg]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>dsp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DSP - Display Report</description>
+</snippet>

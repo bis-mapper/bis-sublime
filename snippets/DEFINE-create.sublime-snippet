@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+DEFINE ${1:NAME              }_ '${2:value                }' ${3:description                    } ${4:parent              }
+@.=====.NAME_==============.'value'================.description====================.parent==============.
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>DEFINE</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>:DEFINE - Create Define</description>
+</snippet>

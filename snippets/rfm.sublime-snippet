@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+rfm,${1:icab},${2:idrw},${3:irpt},${4:rcab},${5:rdrw},${6:rrpt} '${7:opts}' ${8:icc} ,${9:ip} ${10:rcc} ,${11:rp} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>rfm</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RFM - Reformat Report</description>
+</snippet>

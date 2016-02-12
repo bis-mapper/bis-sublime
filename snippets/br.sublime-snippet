@@ -6,5 +6,5 @@ br,[${1:cab},${2:drw},${3:rpt}] ${4:run}[,${5:vld}] .
   <tabTrigger>br</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@br background run</description>
+  <description>@BR - Background run</description>
 </snippet>

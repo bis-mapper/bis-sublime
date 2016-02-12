@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+os,${1:[cab]},${2:[drw]},${3:[user]},${4:[psw]},${5:[label]} ${6:o} '${7:[cmd]}' .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>os</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@OS - Operating System Interface Command</description>
+</snippet>

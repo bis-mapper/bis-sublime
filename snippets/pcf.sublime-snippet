@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+pcf,${1:[opt]} ${2:oname} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>pcf</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PCF - PC File Command</description>
+</snippet>

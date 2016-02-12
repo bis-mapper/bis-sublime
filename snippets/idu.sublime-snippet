@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+idu,${1:cab},${2:drw},${3:[q]},${4:[user]},${5:[sdate]},${6:[endate]},${7:[srpt]},${8:[endrpt]} ${9:[vrpts]},${10:[vlines]},${11:[vrptsd]},${12:[vhirptd]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>idu</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@IDU - Index User Command</description>
+</snippet>

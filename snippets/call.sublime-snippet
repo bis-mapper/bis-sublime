@@ -6,5 +6,5 @@ call${1:[,cab,drw,rpt]} ${2:lab} (${3:[param]}) .
   <tabTrigger>call</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@call standard format</description>
+  <description>@CALL - Standard</description>
 </snippet>

@@ -6,5 +6,5 @@ cau,${1:cab},${2:drw},${3:rpt}${4:[,l,q,lab]} '${5:opt}' '${6:fld}' '¬',${7:p} 
   <tabTrigger>cau</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@cau cal update</description>
+  <description>@CAU - CAL Update</description>
 </snippet>

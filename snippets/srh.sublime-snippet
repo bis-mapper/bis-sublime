@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-srh,${1:cab},${2:drw},${3:rpt} '${4:opt}' '${5:fld}' '¬',${6:val} .
+srh,${1:cab},${2:drw},${3:[rpt]},${4:[l]},${5:[q]},${6:[label]} '${7:o}' ${8:cc} '${9:ltyp}',${10:p} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>srh</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@srh search command</description>
+  <description>@SRH - Search Command</description>
 </snippet>
