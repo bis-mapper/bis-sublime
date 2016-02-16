@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-fil,${1:cab},${2:drw},${3:rpt},${4:[mapperf?]},${5:[hdgs?]},${6:[label]} ${7:filename} .
+fil,${1:cab},${2:drw},${3:rpt},${4:[mapperf?]},${5:[hdgs?]},${6:[lab]} ${7:filename} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>fil</tabTrigger>

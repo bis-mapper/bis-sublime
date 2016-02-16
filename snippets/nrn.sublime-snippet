@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-nrn,${1:[label]} "${2:run statements}" ${3:[vmsg]} .
+nrn,${1:[lab]} "${2:run statements}" ${3:[vmsg]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>nrn</tabTrigger>

@@ -6,5 +6,5 @@ gto lin${1:+2} .
   <tabTrigger>gto lin</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@GTO - LIN +/-</description>
+  <description>@GTO - Goto Command LIN +/-</description>
 </snippet>

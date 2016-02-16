@@ -6,5 +6,5 @@ xqt "@${1:custom}" .
   <tabTrigger>xqt</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@XQT - Execute "@CUSTOM"</description>
+  <description>@XQT - Execute Command "@CUSTOM"</description>
 </snippet>

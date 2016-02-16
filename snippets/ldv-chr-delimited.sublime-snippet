@@ -6,5 +6,5 @@ ldv,q ${1:receivingvariable}=${2:issuingvariable},${3:n}(${4:delim}) .
   <tabTrigger>ldv</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@LDV - Load Variable CHR DELIMITED</description>
+  <description>@LDV - Load Variable Command CHR DELIMITED</description>
 </snippet>

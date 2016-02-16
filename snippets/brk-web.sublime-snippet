@@ -6,5 +6,5 @@ brk,0,f,,y .
   <tabTrigger>brk</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@BRK -  WEBSCRIPT</description>
+  <description>@BRK - Break Command WEBSCRIPT</description>
 </snippet>

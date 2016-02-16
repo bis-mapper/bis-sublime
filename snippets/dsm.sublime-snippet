@@ -6,5 +6,5 @@ dsm,${1:cab},${2:drw},${3:rpt},${4:lmsg},${5:[tabp]},${6:[erase?]},${7:[interim?
   <tabTrigger>dsm</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@DSM - Display Message</description>
+  <description>@DSM - Display Message Command</description>
 </snippet>

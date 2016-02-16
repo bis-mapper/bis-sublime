@@ -6,5 +6,5 @@ cab,${1:cab},${2:drw} .
   <tabTrigger>cab</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@CAB - Cabinet Switch</description>
+  <description>@CAB - Cabinet Switch Command</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-help,,${1:[label]} ${2:[topic]} .
+help,,${1:[lab]} ${2:[topic]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>help</tabTrigger>

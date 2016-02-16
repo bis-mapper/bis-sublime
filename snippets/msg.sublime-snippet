@@ -6,5 +6,5 @@ msg,${1:[o]} ${2:vld} ${3:[vrsp]} .
   <tabTrigger>msg</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@MSG - Message to Console</description>
+  <description>@MSG - Message to Console Command</description>
 </snippet>

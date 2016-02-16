@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-pcr,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[b?]},${5:[tltln?]},${6:[label]},${7:[opt]} ${8:oname} .
+pcr,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[b?]},${5:[tltln?]},${6:[lab]},${7:[opt]} ${8:oname} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>pcr</tabTrigger>

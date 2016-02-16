@@ -6,5 +6,5 @@ rdb[,${1:WorkshopHostAddress},${2:WorkshopPortNumber}] .
   <tabTrigger>rdb</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@RDB - Run Debug</description>
+  <description>@RDB - Run Debug Command</description>
 </snippet>

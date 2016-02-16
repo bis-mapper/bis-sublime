@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-rln[,${1:line},${2:label}] ${3:cc} ${4:data}
+rln[,${1:line},${2:lab}] ${3:cc} ${4:data}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>rln</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@RLN - Read Line Next</description>
+  <description>@RLN - Read Line Next Command</description>
 </snippet>

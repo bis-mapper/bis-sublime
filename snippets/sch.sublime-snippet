@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-sch,[${1:date1},${2:time2}] ${3:runstmt} .
+sch,${1:[date1]},${2:[time2]} ${3:runstmt} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>sch</tabTrigger>

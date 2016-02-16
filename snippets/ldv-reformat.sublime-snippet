@@ -6,5 +6,5 @@ ldv,${1:[o]} ${2:v} .
   <tabTrigger>ldv</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@LDV - Load Variable REFORMAT</description>
+  <description>@LDV - Load Variable Command REFORMAT</description>
 </snippet>

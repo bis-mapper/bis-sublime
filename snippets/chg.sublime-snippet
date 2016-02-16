@@ -6,5 +6,5 @@ chg ${1:v} ${2:{exp|vld\}} .
   <tabTrigger>chg</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@CHG - Change expression</description>
+  <description>@CHG - Change Variable Command</description>
 </snippet>

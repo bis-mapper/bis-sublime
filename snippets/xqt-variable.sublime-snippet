@@ -6,5 +6,5 @@ xqt <${1:variable}> .
   <tabTrigger>xqt</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@XQT - Execute VARIABLE</description>
+  <description>@XQT - Execute Command VARIABLE</description>
 </snippet>

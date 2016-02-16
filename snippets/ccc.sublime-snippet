@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-ccc[,${1:label}] ${2:prog-id} ${3:vch} ${4:[vmsg]} .
+ccc,${1:[lab]} ${2:prog-id} ${3:vch} ${4:[vmsg]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>ccc</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@CCC - COM Client Create Instance</description>
+  <description>@CCC - COM Client Create Instance Command</description>
 </snippet>

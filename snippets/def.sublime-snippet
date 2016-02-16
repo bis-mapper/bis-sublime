@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-def,${1:[o]},${2:[label]} ${3:setv},${4:testv} .
+def,${1:[o]},${2:[lab]} ${3:setv},${4:testv} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>def</tabTrigger>

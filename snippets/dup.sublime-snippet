@@ -6,5 +6,5 @@ dup,${1:cab},${2:drw},${3:rpt},${4:[rcab]},${5:[rdrw]} ${6:[vtitle]} .   (RPT\$ 
   <tabTrigger>dup</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@DUP - Duplicate Report</description>
+  <description>@DUP - Duplicate Report Command</description>
 </snippet>

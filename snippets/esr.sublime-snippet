@@ -6,5 +6,5 @@ esr,${1:[q]} .
   <tabTrigger>esr</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@ESR - Exit Subroutine</description>
+  <description>@ESR - Exit Subroutine Command</description>
 </snippet>

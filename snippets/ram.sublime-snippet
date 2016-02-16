@@ -7,5 +7,5 @@ ram,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[lab]},${5:[o]},${6:[adj]},${7:[dup/col
   <tabTrigger>ram</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@RAM - Relational Aggreagate Modify Command</description>
+  <description>@RAM - Relational Aggregate Modify Command</description>
 </snippet>

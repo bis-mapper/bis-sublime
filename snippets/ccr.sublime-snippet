@@ -6,5 +6,5 @@ ccr ${1:vch} .
   <tabTrigger>ccr</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@CCR - COM Client Release Instance</description>
+  <description>@CCR - COM Client Release Instance Command</description>
 </snippet>

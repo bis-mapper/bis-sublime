@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-srh,${1:cab},${2:drw},${3:[rpt]},${4:[l]},${5:[q]},${6:[label]} '${7:o}' ${8:cc} '${9:ltyp}',${10:p} .
+srh,${1:cab},${2:drw},${3:[rpt]},${4:[l]},${5:[q]},${6:[lab]} '${7:o}' ${8:cc} ${9:ltyp},${10:p} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>srh</tabTrigger>

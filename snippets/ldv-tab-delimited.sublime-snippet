@@ -6,5 +6,5 @@ ldv,q ${1:rv}=${2:iv},${3:n} .
   <tabTrigger>ldv</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@LDV - Load Variable TAB DELIMITED</description>
+  <description>@LDV - Load Variable Command TAB DELIMITED</description>
 </snippet>

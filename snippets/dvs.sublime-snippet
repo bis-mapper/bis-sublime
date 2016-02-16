@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-dvs,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[label]} ${5:field} ${6:v} .
+dvs,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[lab]} ${5:field} ${6:v} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>dvs</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@DVS - Define Variable Size</description>
+  <description>@DVS - Define Variable Size Command</description>
 </snippet>

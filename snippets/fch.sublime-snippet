@@ -8,5 +8,5 @@ fch,${1:cab},${2:drw},${3:[lab]},${4:[o]},${5:[adj]},${6:[skip]},${7:[q]},${8:[e
   <tabTrigger>fch</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@FCH - Relational Aggregate Fetch</description>
+  <description>@FCH - Relational Aggregate Fetch Command</description>
 </snippet>

@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-brk${1:[,cab,drw,,webscript?]} .
+brk,${1:[cab]},${2:[drw]},,${3:[webscript?]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>brk</tabTrigger>

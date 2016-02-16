@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-@SQL[,${1:label},${2:edsp?},${3:rcab},${4:rdrw},${5:cstat},${6:dbname}] '${7:syntax}' [,${8:scab},${9:sdrw},${10:srpt},${11:sel},${12:sq}] ${13:vstat}[,${14:vcol},${15:vretn}] .
+@SQL,${1:[lab]},${2:[edsp?]},${3:[rcab]},${4:[rdrw]},${5:[cstat]},${6:[dbname]} '${7:syntax}',${8:[cab]},${9:[drw]},${10:[rpt]},${11:[sel]},${12:[sq]} ${13:vstat},${14:[vcol]},${15:[vretn]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>sql</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@SQL - Submit SQL</description>
+  <description>@SQL - Submit SQL Command</description>
 </snippet>

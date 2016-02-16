@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-cmp,${1:cab1},${2:drw1},${3:rpt1},${4:[lin1]},${5:cab2},${6:drw2},${7:rpt2},${8:[lin2]},${9:[q]},${10:[label]} '${11:opts}' ${12:cc1} ${13:ltyp1},${14:p1} ${15:cc2} ${16:ltyp2},${17:p2} [${18:vlno1},${19:vcol1},${20:vlno2},${21:vcol2}] .
+cmp,${1:cab1},${2:drw1},${3:rpt1},${4:[lin1]},${5:cab2},${6:drw2},${7:rpt2},${8:[lin2]},${9:[q]},${10:[label]} '${11:o}' ${12:cc1} ${13:ltyp1},${14:p1} ${15:cc2} ${16:ltyp2},${17:p2} ${18:[vlno1]},${19:[vcol1]},${20:[vlno2]},${21:[vcol2]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>cmp</tabTrigger>
