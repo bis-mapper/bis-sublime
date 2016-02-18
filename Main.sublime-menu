@@ -48,161 +48,175 @@
         "id": "preferences",
         "mnemonic": "n"
     },
-    {
+    {//SUBLWATCHER
         "caption": "SUBLWATCHER",
         "children": [
             {
-                "args": {
-                    "platform": "Windows"
-                },
-                "caption": "Build Application",
-                "command": "build",
-                "mnemonic": "n",
-                "id": "build"
+                "caption": "TESTING",
+                "command": "subl_test",
+                "id": "subl_test"
             },
-            {
-                "caption": "Export Application",
-                "command": "export",
-                "mnemonic": "n",
-                "id": "export"
-            },
-            {
-                "caption": "Git commands",
+            {//BEGIN SUB: APPLICATION - CURRENT
+                "caption": "Application - Current",
                 "children": [
-                    {
-                        "caption": "Git status",
-                        "command": "git_status",
-                        "mnemonic": "n",
-                        "id": "git status"
-                    },
-                    {
-                        "caption": "Git push",
-                        "command": "git_push",
-                        "mnemonic": "n",
-                        "id": "git push"
-                    },
-                    {
-                        "caption": "Git pull",
-                        "command": "git_pull",
-                        "mnemonic": "n",
-                        "id": "git pull"
-                    },
-                    {
-                        "caption": "Git push frontend",
-                        "command": "git_custom",
+                    {//EXPORT - CURRENT ========================================
                         "args": {
-                            "cmd": "subtree push --prefix=app/frontend --squash frontend master"
-                        },
-                        "mnemonic": "n",
-                        "id": "git pull"
+                                    "text": "EXPORT"
+                                },
+                        "command": "app_current",
+                        "caption": "Export Application",
+                        "mnemonic": "E",
+                        "id": "export_current"
                     },
-                    {
-                        "caption": "Git pull frontend",
-                        "command": "git_custom",
+                    {//BUILD - CURRENT =========================================
                         "args": {
-                            "cmd": "subtree pull --prefix=app/frontend --squash frontend master"
-                        },
-                        "mnemonic": "n",
-                        "id": "git pull"
+                                    "text": "BUILD"
+                                },
+                        "command": "app_current",
+                        "caption": "Build Application",
+                        "mnemonic": "B",
+                        "id": "build_current"
                     },
-                    {
-                        "caption": "Git push ice_modules",
-                        "command": "git_custom",
+                    {//DEPLOY to X - CURRENT ===================================
                         "args": {
-                            "cmd": "subtree push --prefix=lib/external/ice_modules --squash ice_modules master"
-                        },
-                        "mnemonic": "n",
-                        "id": "git pull"
+                                    "text": "DEPLOY -E THOR"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - THOR(Site-X)",
+                        "id": "deploy_current"
                     },
-                    {
-                        "caption": "Git pull ice_modules",
-                        "command": "git_custom",
+                    {//DEPLOY to F - CURRENT ===================================
                         "args": {
-                            "cmd": "subtree pull --prefix=lib/external/ice_modules --squash ice_modules master"
-                        },
-                        "mnemonic": "n",
-                        "id": "git pull"
+                                    "text": "DEPLOY -E DEV"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - DEV(Site-F)",
+                        "id": "deploy_current"
+                    },
+                    {//DEPLOY to E - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E TEST"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - TEST(Site-E)",
+                        "mnemonic": "D",
+                        "id": "deploy_current"
+                    },
+                    {//DEPLOY to D - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E PROD"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - PROD(Site-D)",
+                        "id": "deploy_current"
                     }
                 ]
-            },
-            {
-                "caption": "Gulp",
-                "command": "gulp",
-                "mnemonic": "n",
-                "id": "gulp"
-            },
-            {
-                "caption": "Deploy Application"
-            },
-            {
-                "caption": "Settings",
+            },//END SUB: APPLICATION - CURRENT
+            {//BEGIN SUB: APPLICATION - OTHER
+                "caption": "Application - Other",
                 "children": [
-                    {
-                        "args": {
-                            "file": "${packages}/bis-sublime/BIS.sublime-settings"
-                        },
-                        "caption": "Settings \u2013 Default",
-                        "command": "open_file"
-                    },
-                    {
-                        "args": {
-                            "file": "${packages}/User/BIS.sublime-settings"
-                        },
-                        "caption": "Settings \u2013 User",
-                        "command": "open_file"
-                    },
-                    {
-                        "args": {
-                            "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
-                            "platform": "Windows"
-                        },
-                        "caption": "Key Bindings \u2013 Default",
-                        "command": "open_file"
-                    },
-                    {
-                        "args": {
-                            "file": "${packages}/User/Default (Windows).sublime-keymap",
-                            "platform": "Windows"
-                        },
-                        "caption": "Key Bindings \u2013 User",
-                        "command": "open_file"
+                    {//EXPORT - CURRENT ========================================
+                        "caption": "Export Application",
+                        "command": "export_other",
+                        "mnemonic": "E",
+                        "id": "export_other"
                     }
                 ]
-            }
+            }//END SUB: APPLICATION - OTHER
         ],
-        "id": "sublwatcher",
-        "mnemonic": "n"
-    },
-    {
+        "id": "sublwatcher_menu",
+        "mnemonic": "W"
+    },//END SUBLWATCHER
+    {//ICEBUILD
         "caption": "ICEBUILD",
         "children": [
-            {
-                "caption": "New",
+            {//BEGIN SUB: ICEBUILD APP
+                "caption": "ICEBUILD",
                 "children": [
-                    {
-                        "caption": "Application",
-                        "command": "git_status",
-                        "mnemonic": "n",
-                        "id": "git status"
+                    {//GEN,R ===================================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "R",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Resource",
+                        "id": "ibld_gen_r"
                     },
-                    {
-                        "caption": "Resource",
-                        "command": "new_resource",
-                        "mnemonic": "n",
-                        "id": "IBLD new resource"
-                    },
-                ]
-            },
-            {
-                "caption": "Delete",
-                "children": [
-                    {
-                        "caption": "Resource",
+                    {//DEL,R ===================================================
+                        "args": {
+                                    "icmd": "DEL",
+                                    "itype": "R",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "Delete Resource",
+                        "id": "ibld_del_r"
                     }
                 ]
+            },//END SUB: APPLICATION - OTHER
+            {//BEGIN SUB: NON-ICEBUILD APP
+                "caption": "NON-ICEBUILD",
+                "children": [
+                    {//GEN,S,WEBSCRIPT =========================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "S",
+                                    "iscript": "Y"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Service - WEBSCRIPT",
+                        "id": "ibld_gen_s_web"
+                    },
+                    {//GEN,S,No WEBSCRIPT ======================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "S",
+                                    "iscript": "N"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Service - NON-WEBSCRIPT",
+                        "id": "ibld_gen_s"
+                    },
+                    {//DEL,S ===================================================
+                        "args": {
+                                    "icmd": "DEL",
+                                    "itype": "S",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "Delete Service",
+                        "id": "ibld_del_s"
+                    }
+                ]
+            }//END SUB: APPLICATION - OTHER
+        ],
+        "id": "icebuild_menu",
+        "mnemonic": "I"
+    },//END ICEBUILD
+    {//GIT
+        "caption": "GIT",
+        "children": [
+            {
+                "caption": "Git status",
+                "command": "git_status",
+                "mnemonic": "s",
+                "id": "git status"
+            },
+            {
+                "caption": "Git push",
+                "command": "git_push",
+                "mnemonic": "h",
+                "id": "git push"
+            },
+            {
+                "caption": "Git pull",
+                "command": "git_pull",
+                "mnemonic": "l",
+                "id": "git pull"
             }
         ],
-        "id": "ibld",
-        "mnemonic": "n"
-    }
+        "id": "git_menu",
+        "mnemonic": "G"
+    }//END GIT
 ]
