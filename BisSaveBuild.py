@@ -2,13 +2,18 @@ import sublime
 import sublime_plugin
 import re
 import os
+import datetime
 
 
 class BisSaveBuild(sublime_plugin.EventListener):
 
+    def on_pre_save(self, view):
+        t = os.path.getmtime(view.file_name())
+        self.dt = datetime.datetime.fromtimestamp(t).strftime("%Y%m%d %H%M%S")
+
     def on_post_save(self, view):
         global_settings = sublime.load_settings('BIS.sublime-settings')
-        print
+
 
         # See if we should build. A project level build_on_save setting
         # takes precedence. To be backward compatible, we assume the global
@@ -19,7 +24,7 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Load filename filter. Again, a project level setting takes precedence.
         filename_filter = view.settings().get(
             'filename_filter', global_settings.get('filename_filter', '.*'))
-        print("Filename filter" + filename_filter)
+        #print("Filename filter" + filename_filter)
 
         if not should_build:
             return
@@ -41,4 +46,4 @@ class BisSaveBuild(sublime_plugin.EventListener):
 
         # Write file to path
         with open(file_path, "w") as textfile:
-            textfile.write("modified" + "," + file_name + ", file, BisSaveBuild")
+            textfile.write("modified" + "," + file_name + ", file, BisSaveBuild," + self.dt[:8] + "," + self.dt[9:])
