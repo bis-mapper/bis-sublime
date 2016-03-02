@@ -51,14 +51,14 @@
     {//SUBLWATCHER
         "caption": "SUBLWATCHER",
         "children": [
-            {
-                "caption": "TESTING",
-                "command": "subl_test",
-                "id": "subl_test"
-            },
-            {//BEGIN SUB: APPLICATION - CURRENT
-                "caption": "Application - Current",
-                "children": [
+//            {
+//                "caption": "TESTING",
+//                "command": "subl_test",
+//                "id": "subl_test"
+//            },
+//            {//BEGIN SUB: APPLICATION - CURRENT
+//                "caption": "Application - Current",
+//                "children": [
                     {//EXPORT - CURRENT ========================================
                         "args": {
                                     "text": "EXPORT"
@@ -110,19 +110,19 @@
                         "caption": "Deploy - PROD(Site-D)",
                         "id": "deploy_current"
                     }
-                ]
-            },//END SUB: APPLICATION - CURRENT
-            {//BEGIN SUB: APPLICATION - OTHER
-                "caption": "Application - Other",
-                "children": [
-                    {//EXPORT - CURRENT ========================================
-                        "caption": "Export Application",
-                        "command": "export_other",
-                        "mnemonic": "E",
-                        "id": "export_other"
-                    }
-                ]
-            }//END SUB: APPLICATION - OTHER
+//                ]
+//            },//END SUB: APPLICATION - CURRENT
+//            {//BEGIN SUB: APPLICATION - OTHER
+//                "caption": "Application - Other",
+//                "children": [
+//                    {//EXPORT - CURRENT ========================================
+//                        "caption": "Export Application",
+//                        "command": "export_other",
+//                        "mnemonic": "E",
+//                        "id": "export_other"
+//                    }
+//                ]
+//            }//END SUB: APPLICATION - OTHER
         ],
         "id": "sublwatcher_menu",
         "mnemonic": "W"
@@ -154,7 +154,7 @@
                         "id": "ibld_del_r"
                     }
                 ]
-            },//END SUB: APPLICATION - OTHER
+            },//END SUB: ICEBUILD APP
             {//BEGIN SUB: NON-ICEBUILD APP
                 "caption": "NON-ICEBUILD",
                 "children": [
@@ -189,7 +189,7 @@
                         "id": "ibld_del_s"
                     }
                 ]
-            }//END SUB: APPLICATION - OTHER
+            }//END SUB: NON-ICEBUILD APP
         ],
         "id": "icebuild_menu",
         "mnemonic": "I"
@@ -198,19 +198,31 @@
         "caption": "GIT",
         "children": [
             {
-                "caption": "Git status",
+                "caption": "Git Status",
                 "command": "git_status",
-                "mnemonic": "s",
+                "mnemonic": "S",
                 "id": "git status"
             },
             {
-                "caption": "Git push",
+                "caption": "Git Checkout",
+                "command": "git_checkout_branch",
+                "mnemonic": "C",
+                "id": "git checkout"
+            },
+            {
+                "caption": "Git Checkout - New Branch",
+                "command": "git_checkout_new_branch",
+                "mnemonic": "N",
+                "id": "git checkout"
+            },
+            {
+                "caption": "Git Push",
                 "command": "git_push",
                 "mnemonic": "h",
                 "id": "git push"
             },
             {
-                "caption": "Git pull",
+                "caption": "Git Pull",
                 "command": "git_pull",
                 "mnemonic": "l",
                 "id": "git pull"
