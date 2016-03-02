@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+lzr,${1:cab},${2:drw},${3:rpt},${4:[lab]} ${5:[vlines]},${6:[vcpl]},${7:[vhdgs]},,,${8:[vdept]},${9:[vuser]},${10:[vrpw]},${11:[vwpw]},${12:[vlgn]},${13:[vrtyp]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lzr</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LZR - Line Zero Command FULL</description>
+</snippet>

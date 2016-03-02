@@ -1,50 +1,234 @@
 [
     {
         "caption": "Preferences",
-        "mnemonic": "n",
-        "id": "preferences",
-        "children":
-        [
+        "children": [
             {
                 "caption": "Package Settings",
-                "mnemonic": "P",
-                "id": "package-settings",
-                "children":
-                [
+                "children": [
                     {
                         "caption": "bis-sublime",
-                        "children":
-                        [
+                        "children": [
                             {
-                                "command": "open_file",
-                                "args": {"file": "${packages}/bis-sublime/BIS.sublime-settings"},
-                                "caption": "Settings – Default"
-                            },
-                            {
-                                "command": "open_file",
-                                "args": {"file": "${packages}/User/BIS.sublime-settings"},
-                                "caption": "Settings – User"
-                            },
-                            {
-                                "command": "open_file",
                                 "args": {
-                                        "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
-                                        "platform": "Windows"
+                                    "file": "${packages}/bis-sublime/BIS.sublime-settings"
                                 },
-                                "caption": "Key Bindings – Default"
+                                "caption": "Settings \u2013 Default",
+                                "command": "open_file"
                             },
                             {
-                                "command": "open_file",
                                 "args": {
-                                        "file": "${packages}/User/Default (Windows).sublime-keymap",
-                                        "platform": "Windows"
+                                    "file": "${packages}/User/BIS.sublime-settings"
                                 },
-                                "caption": "Key Bindings – User"
+                                "caption": "Settings \u2013 User",
+                                "command": "open_file"
+                            },
+                            {
+                                "args": {
+                                    "file": "${packages}/bis-sublime/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings \u2013 Default",
+                                "command": "open_file"
+                            },
+                            {
+                                "args": {
+                                    "file": "${packages}/User/Default (Windows).sublime-keymap",
+                                    "platform": "Windows"
+                                },
+                                "caption": "Key Bindings \u2013 User",
+                                "command": "open_file"
                             }
                         ]
                     }
-                ]
+                ],
+                "id": "package-settings",
+                "mnemonic": "P"
             }
-        ]
-    }
+        ],
+        "id": "preferences",
+        "mnemonic": "n"
+    },
+    {//SUBLWATCHER
+        "caption": "SUBLWATCHER",
+        "children": [
+//            {
+//                "caption": "TESTING",
+//                "command": "subl_test",
+//                "id": "subl_test"
+//            },
+//            {//BEGIN SUB: APPLICATION - CURRENT
+//                "caption": "Application - Current",
+//                "children": [
+                    {//EXPORT - CURRENT ========================================
+                        "args": {
+                                    "text": "EXPORT"
+                                },
+                        "command": "app_current",
+                        "caption": "Export Application",
+                        "mnemonic": "E",
+                        "id": "export_current"
+                    },
+                    {//BUILD - CURRENT =========================================
+                        "args": {
+                                    "text": "BUILD"
+                                },
+                        "command": "app_current",
+                        "caption": "Build Application",
+                        "mnemonic": "B",
+                        "id": "build_current"
+                    },
+                    {//DEPLOY to X - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E THOR"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - THOR(Site-X)",
+                        "id": "deploy_current"
+                    },
+                    {//DEPLOY to F - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E DEV"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - DEV(Site-F)",
+                        "id": "deploy_current"
+                    },
+                    {//DEPLOY to E - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E TEST"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - TEST(Site-E)",
+                        "mnemonic": "D",
+                        "id": "deploy_current"
+                    },
+                    {//DEPLOY to D - CURRENT ===================================
+                        "args": {
+                                    "text": "DEPLOY -E PROD"
+                                },
+                        "command": "app_current",
+                        "caption": "Deploy - PROD(Site-D)",
+                        "id": "deploy_current"
+                    }
+//                ]
+//            },//END SUB: APPLICATION - CURRENT
+//            {//BEGIN SUB: APPLICATION - OTHER
+//                "caption": "Application - Other",
+//                "children": [
+//                    {//EXPORT - CURRENT ========================================
+//                        "caption": "Export Application",
+//                        "command": "export_other",
+//                        "mnemonic": "E",
+//                        "id": "export_other"
+//                    }
+//                ]
+//            }//END SUB: APPLICATION - OTHER
+        ],
+        "id": "sublwatcher_menu",
+        "mnemonic": "W"
+    },//END SUBLWATCHER
+    {//ICEBUILD
+        "caption": "ICEBUILD",
+        "children": [
+            {//BEGIN SUB: ICEBUILD APP
+                "caption": "ICEBUILD",
+                "children": [
+                    {//GEN,R ===================================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "R",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Resource",
+                        "id": "ibld_gen_r"
+                    },
+                    {//DEL,R ===================================================
+                        "args": {
+                                    "icmd": "DEL",
+                                    "itype": "R",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "Delete Resource",
+                        "id": "ibld_del_r"
+                    }
+                ]
+            },//END SUB: ICEBUILD APP
+            {//BEGIN SUB: NON-ICEBUILD APP
+                "caption": "NON-ICEBUILD",
+                "children": [
+                    {//GEN,S,WEBSCRIPT =========================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "S",
+                                    "iscript": "Y"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Service - WEBSCRIPT",
+                        "id": "ibld_gen_s_web"
+                    },
+                    {//GEN,S,No WEBSCRIPT ======================================
+                        "args": {
+                                    "icmd": "GEN",
+                                    "itype": "S",
+                                    "iscript": "N"
+                                },
+                        "command": "ibld_input",
+                        "caption": "New Service - NON-WEBSCRIPT",
+                        "id": "ibld_gen_s"
+                    },
+                    {//DEL,S ===================================================
+                        "args": {
+                                    "icmd": "DEL",
+                                    "itype": "S",
+                                    "iscript": "NA"
+                                },
+                        "command": "ibld_input",
+                        "caption": "Delete Service",
+                        "id": "ibld_del_s"
+                    }
+                ]
+            }//END SUB: NON-ICEBUILD APP
+        ],
+        "id": "icebuild_menu",
+        "mnemonic": "I"
+    },//END ICEBUILD
+    {//GIT
+        "caption": "GIT",
+        "children": [
+            {
+                "caption": "Git Status",
+                "command": "git_status",
+                "mnemonic": "S",
+                "id": "git status"
+            },
+            {
+                "caption": "Git Checkout",
+                "command": "git_checkout_branch",
+                "mnemonic": "C",
+                "id": "git checkout"
+            },
+            {
+                "caption": "Git Checkout - New Branch",
+                "command": "git_checkout_new_branch",
+                "mnemonic": "N",
+                "id": "git checkout"
+            },
+            {
+                "caption": "Git Push",
+                "command": "git_push",
+                "mnemonic": "h",
+                "id": "git push"
+            },
+            {
+                "caption": "Git Pull",
+                "command": "git_pull",
+                "mnemonic": "l",
+                "id": "git pull"
+            }
+        ],
+        "id": "git_menu",
+        "mnemonic": "G"
+    }//END GIT
 ]

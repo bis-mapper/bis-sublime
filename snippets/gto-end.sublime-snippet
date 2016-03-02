@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+gto end .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>gto end</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@GTO - Goto Command END</description>
+</snippet>

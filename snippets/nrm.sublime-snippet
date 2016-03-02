@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+nrm,${1:[cab]},${2:[drw]} "${3:cmd}" .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>nrm</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@NRM - Network Remote Command</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+lgn,${1:[lab]},${2:[edsp?]},${3:[cab]},${4:[drw]},${5:[db]} ${6:o},${7:[lang]},${8:[user]},${9:[pw]} ${10:[vdbt]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lgn</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LGN - Log On to Relational Database Command</description>
+</snippet>

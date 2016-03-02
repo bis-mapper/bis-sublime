@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+ram,${1:[cab]},${2:[drw]},${3:[rpt]},${4:[lab]},${5:[o]},${6:[adj]},${7:[dup/col]},${8:[iqty]},${9:[cqty]},${10:[edsp?]},${11:[cstat]},\
+ ${12:[istat]},${13:[nchar]},${14:[db]} '${15:table},${16:[options]}' ${17:[vstat]},${18:[vcol]},${19:[vins]},${20:[vcom]},${21:[vnbq]},${22:[vdpk]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ram</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RAM - Relational Aggregate Modify Command</description>
+</snippet>

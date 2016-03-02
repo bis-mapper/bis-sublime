@@ -10,14 +10,14 @@
 #         file_name = os.path.basename(path)
 #         directory = directory + "\BisBug.bis"
 
-#         # print path
+# print path
 #         current_user = os.environ.get("USERNAME")
-#         # print current_user
+# print current_user
 
-#         #  Check if BisBug script is registered
+# Check if BisBug script is registered
 #         if os.path.exists("C:\Unisys\Clients\MPC\Scripts\BisBug.ATR"):
 
-#             # print "Writing BisBug command file"
+# print "Writing BisBug command file"
 #             with open(directory, "w") as textfile:
 #                 textfile.write(file_name)
 
@@ -27,7 +27,7 @@
 #             })
 
 #         if os.path.exists("C:\Unisys\Clients\MPC$1\Scripts\BisBug.ATR"):
-#             # print "Writing BisBug command file"
+# print "Writing BisBug command file"
 #             with open(directory, "w") as textfile:
 #                 textfile.write(file_name)
 
@@ -36,5 +36,5 @@
 #               "shell": True
 #             })
 
-#         # else:
-#         #     print "Could not find BisBug script in current directory"
+# else:
+# print "Could not find BisBug script in current directory"

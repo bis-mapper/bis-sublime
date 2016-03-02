@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+lnm,${1:cab},${2:drw},${3:rpt},${4:lb4},${5:[x]},${6:l},${7:[q]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>lnm</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LNM - Move Line Command</description>
+</snippet>

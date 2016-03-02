@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+ccp,${1:[lab]} ${2:vch},${3:property} ${4:dt} ${5:value} ${6:[vmsg]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ccp</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CCP - COM Client Put Property Value Command</description>
+</snippet>

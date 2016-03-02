@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+nrn,${1:[lab]} "${2:run statements}" ${3:[vmsg]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>nrn</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@NRN - Network Run Command</description>
+</snippet>

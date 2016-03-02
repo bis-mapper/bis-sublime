@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+prt,${1:cab},${2:drw},${3:[rpt]},${4:[dlnos?]},${5:[f]},${6:[sl]},${7:[cys]},${8:[all?]},${9:[lsp]},${10:[prtqueue]},${11:[banner]},${12:[hdgs?]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>prt</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PRT - Print Command</description>
+</snippet>

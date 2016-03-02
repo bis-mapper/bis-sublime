@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+snu,${1:cab},${2:drw},${3:rpt},${4:user-id},${5:[dept]},${6:[site]},${7:[ack?]},${8:[lab]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>snu</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@SNU - Send Report to User Command</description>
+</snippet>

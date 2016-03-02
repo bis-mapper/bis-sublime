@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-adr,${1:cab},${2:drw},[${3:rpt},${4:lab} ${5:vtitle}] .
+adr,${1:cab},${2:drw},${3:[rpt]},${4:[lab]} ${5:[vtitle]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>adr</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>@adr add new rid command</description>
+  <description>@ADR - Add new report Command</description>
 </snippet>
