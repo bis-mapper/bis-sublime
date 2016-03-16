@@ -12,12 +12,14 @@ import sublime
 import sublime_plugin
 import re
 import os
+import sys
 import datetime
 import subprocess
 import threading
 from getpass import getuser
 from shutil import copyfile
 from random import randint
+from winreg import *
 #===============================================================================
 #
 #===============================================================================
@@ -94,12 +96,19 @@ class BisCtrlCommand(sublime_plugin.WindowCommand):
 #   OPEN SUBLWATCHER!
 class OpenSublwatcherCommand(sublime_plugin.TextCommand):
     def run(self, edit, site):
+        aReg = ConnectRegistry(None,HKEY_LOCAL_MACHINE)
+        aKey = OpenKey(aReg, r"SOFTWARE\Wow6432Node\Unisys\BIS Clients")
+        try:
+            MPCVer=QueryValueEx(aKey, "GIBIS")
+        except EnvironmentError:
+            MPCVer=['5.4','MPCVer-DEFAULT']
+
         appdata = os.environ['appdata']
-        dst1 = appdata+'\\Unisys\\Clients\\MPC5.4\\Scripts\\SITE-'+site+'-SUBLWATCHER.ATR'
+        dst1 = appdata+'\\Unisys\\Clients\\MPC'+MPCVer[0]+'\\Scripts\\SITE-'+site+'-SUBLWATCHER.ATR'
         if not os.path.exists(dst1):
             src1 = 'S:\\SUBLWATCHER_SCRIPTS\\SITE-'+site+'-SUBLWATCHER.ATR'
             src2 = 'S:\\SUBLWATCHER_SCRIPTS\\SITE-'+site+'-SUBLWATCHER.SCR'
-            dst2 = appdata+'\\Unisys\\Clients\\MPC5.4\\Scripts\\SITE-'+site+'-SUBLWATCHER.SCR'
+            dst2 = appdata+'\\Unisys\\Clients\\MPC'+MPCVer[0]+'\\Scripts\\SITE-'+site+'-SUBLWATCHER.SCR'
             copyfile(src1,dst1)
             copyfile(src2,dst2)
         th = SublwatcherThread(site)
@@ -111,7 +120,7 @@ class SublwatcherThread(threading.Thread):
         threading.Thread.__init__(self)
 
     def run(self):
-        subprocess.call('C:\\Unisys\\Clients\\MPC\\mpcapi32.exe -cSITE-'+self.site+'-SUBLWATCHER -dD:\\Unisys\\Mapper\\MAPPER.MSF')
+        subprocess.call('C:\\Unisys\\Clients\\MPC\\mpcapi32.exe -cSITE-'+self.site+'-SUBLWATCHER')
 #===============================================================================
 #
 #===============================================================================
@@ -131,6 +140,11 @@ class AppCurrentCommand(sublime_plugin.TextCommand):
 
         # Get User variables
         appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,self.view)
+
+        #do git_path stuff if needed
+        if text[:6].upper() == "DEPLOY" or text[:5].upper() == "BUILD":
+            git_path_file = appdata + '\\' + app + '\\GITPATH.INF'
+            git_path(git_path_file)
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
@@ -321,6 +335,19 @@ def get_user_vars(statline,statpage,global_settings,cur_view):
 def write_file(file_path,chg_text):
     with open(file_path, "w") as textfile:
         textfile.write(chg_text)
+    return
+#===============================================================================
+#
+#===============================================================================
+#   GIT_PATH - finds git.exe and puts path into SUBLWATCHER\GITPATH.INF
+def git_path(git_path_file):
+    process = subprocess.Popen('where git.exe', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out = str(process.stdout.read())
+    pos = out.find('git.exe')
+    pos = pos + 7
+    out = out[2:pos]
+    out = out.replace('\\\\', '\\')
+    write_file(git_path_file,out)
     return
 #===============================================================================
 #
