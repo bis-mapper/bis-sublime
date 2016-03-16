@@ -143,8 +143,16 @@ class AppCurrentCommand(sublime_plugin.TextCommand):
 
         #do git_path stuff if needed
         if text[:6].upper() == "DEPLOY" or text[:5].upper() == "BUILD":
-            git_path_file = appdata + '\\' + app + '\\GITPATH.INF'
-            git_path(git_path_file)
+            #git_path_file = appdata + '\\' + app + '\\GITPATH.INF'
+            status = git_path()
+            path_error = ""
+            if status[0] == "0":
+                path_error += "\ngit.exe not found in environment path!"
+            if status[1] == "0":
+                path_error += "\n sh.exe not found in environment path!"
+            if len(path_error) > 0:
+                sublime.error_message("Operation Error:"+path_error)
+                return
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
@@ -340,15 +348,31 @@ def write_file(file_path,chg_text):
 #
 #===============================================================================
 #   GIT_PATH - finds git.exe and puts path into SUBLWATCHER\GITPATH.INF
-def git_path(git_path_file):
+def git_path():
+    # GIT.EXE path
     process = subprocess.Popen('where git.exe', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    out = str(process.stdout.read())
-    pos = out.find('git.exe')
-    pos = pos + 7
-    out = out[2:pos]
-    out = out.replace('\\\\', '\\')
-    write_file(git_path_file,out)
-    return
+    git_out = str(process.stdout.read())
+    if git_out == "b''":
+        status = "0"
+    else:
+        status = "1"
+    # SH.EXE path
+    process = subprocess.Popen('where sh.exe', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    sh_out = str(process.stdout.read())
+    if sh_out == "b''":
+        status += "0"
+    else:
+        status += "1"
+    ## GIT.EXE path
+    #process = subprocess.Popen('where git.exe', shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    #git_out = str(process.stdout.read())
+    #pos = git_out.find('git.exe')
+    #pos = pos + 7
+    #git_out = git_out[2:pos]
+    #git_out = git_out.replace('\\\\', '\\')
+    #out = git_out + "\n" + sh_out
+    #write_file(git_path_file,out)
+    return status
 #===============================================================================
 #
 #===============================================================================
