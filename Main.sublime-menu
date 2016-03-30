@@ -56,9 +56,141 @@
 //                "command": "subl_test",
 //                "id": "subl_test"
 //            },
-//            {//BEGIN SUB: APPLICATION - CURRENT
-//                "caption": "Application - Current",
-//                "children": [
+            {//BEGIN SUB: CURRENT REPORT
+                "caption": "Current Report",
+                "children": [
+                    {//REGISTER ================================================
+                        "args": {
+                                    "text": "REG"
+                                },
+                        "command": "app_current",
+                        "caption": "Register (REG)",
+                        "mnemonic": "R",
+                        "id": "register"
+                    },
+                    {//RELOAD ==================================================
+                        "args": {
+                                    "text": "RELOAD"
+                                },
+                        "command": "app_current",
+                        "caption": "Re-Open from MAPPER (SUBL)",
+                        "mnemonic": "O",
+                        "id": "register"
+                    },
+                    {//SBS =====================================================
+                        "args": {
+                                    "text": "SBS"
+                                },
+                        "command": "app_current",
+                        "caption": "Standardize BIS Script (SBS)",
+                        "mnemonic": "S",
+                        "id": "register"
+                    },
+                    { "caption": "-" },
+                            {//DIFF - CURRENT SITE =============================
+                                "args": {
+                                            "text": "DIFF"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Current Site",
+                                "mnemonic": "S",
+                                "id": "diff_current"
+                            },
+                            {//DIFF - SITE X ===================================
+                                "args": {
+                                            "text": "DIFF -S X"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - X",
+                                "mnemonic": "X",
+                                "id": "diff_x"
+                            },
+                            {//DIFF - SITE F ===================================
+                                "args": {
+                                            "text": "DIFF -S F"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - F",
+                                "mnemonic": "F",
+                                "id": "diff_f"
+                            },
+                            {//DIFF - SITE E ===================================
+                                "args": {
+                                            "text": "DIFF -S E"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - E",
+                                "mnemonic": "E",
+                                "id": "diff_e"
+                            },
+                            {//DIFF - SITE D ===================================
+                                "args": {
+                                            "text": "DIFF -S D"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - D",
+                                "mnemonic": "D",
+                                "id": "diff_d"
+                            },
+                            {//DIFF - SITE C ===================================
+                                "args": {
+                                            "text": "DIFF -S C"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - C",
+                                "mnemonic": "C",
+                                "id": "diff_c"
+                            },
+                            {//DIFF - SITE A ===================================
+                                "args": {
+                                            "text": "DIFF -S A"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - A",
+                                "mnemonic": "A",
+                                "id": "diff_a"
+                            },
+                            {//DIFF - SITE N ===================================
+                                "args": {
+                                            "text": "DIFF -S N"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - N",
+                                "mnemonic": "N",
+                                "id": "diff_n"
+                            },
+                            {//DIFF - SITE B ===================================
+                                "args": {
+                                            "text": "DIFF -S B"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - B",
+                                "mnemonic": "B",
+                                "id": "diff_b"
+                            },
+                            {//DIFF - OTHER REPORT - CURRENT SITE ==============
+                                "args": {
+                                            "site": "CURRENT"
+                                        },
+                                "command": "diff_other",
+                                "caption": "DIFF w/ Other Rpt - Current Site",
+                                "mnemonic": "O",
+                                "id": "diff_other_current"
+                            },
+                            {//DIFF - OTHER REPORT - OTHER SITE ================
+                                "args": {
+                                            "site": "OTHER"
+                                        },
+                                "command": "diff_other",
+                                "caption": "DIFF w/ Other Rpt - Different Site",
+                                "mnemonic": "R",
+                                "id": "diff_other_other"
+                            }
+                ]
+            },//END SUB: CURRENT REPORT
+            {//BEGIN SUB: APPLICATION - CURRENT
+                "caption": "Current Application",
+                "children": [
                     {//EXPORT - CURRENT ========================================
                         "args": {
                                     "text": "EXPORT"
@@ -77,12 +209,13 @@
                         "mnemonic": "B",
                         "id": "build_current"
                     },
+                    { "caption": "-" },
                     {//DEPLOY to X - CURRENT ===================================
                         "args": {
                                     "text": "DEPLOY -E THOR"
                                 },
                         "command": "app_current",
-                        "caption": "Deploy - THOR(Site-X)",
+                        "caption": "Deploy - THOR(Site - X)",
                         "id": "deploy_current"
                     },
                     {//DEPLOY to F - CURRENT ===================================
@@ -90,7 +223,7 @@
                                     "text": "DEPLOY -E DEV"
                                 },
                         "command": "app_current",
-                        "caption": "Deploy - DEV(Site-F)",
+                        "caption": "Deploy - DEV(Site - F)",
                         "id": "deploy_current"
                     },
                     {//DEPLOY to E - CURRENT ===================================
@@ -98,7 +231,7 @@
                                     "text": "DEPLOY -E TEST"
                                 },
                         "command": "app_current",
-                        "caption": "Deploy - TEST(Site-E)",
+                        "caption": "Deploy - TEST(Site - E)",
                         "mnemonic": "D",
                         "id": "deploy_current"
                     },
@@ -107,22 +240,89 @@
                                     "text": "DEPLOY -E PROD"
                                 },
                         "command": "app_current",
-                        "caption": "Deploy - PROD(Site-D)",
+                        "caption": "Deploy - PROD(Site - D)",
                         "id": "deploy_current"
                     }
-//                ]
-//            },//END SUB: APPLICATION - CURRENT
-//            {//BEGIN SUB: APPLICATION - OTHER
-//                "caption": "Application - Other",
-//                "children": [
-//                    {//EXPORT - CURRENT ========================================
-//                        "caption": "Export Application",
-//                        "command": "export_other",
-//                        "mnemonic": "E",
-//                        "id": "export_other"
-//                    }
-//                ]
-//            }//END SUB: APPLICATION - OTHER
+                ]
+            },//END SUB: APPLICATION - CURRENT
+            { "caption": "-" },
+            {//BEGIN SUB: OPEN SUBLWATCHER
+                "caption": "Open Sublwatcher",
+                "children": [
+                    {//Site - X ================================================
+                        "args": {
+                                    "site": "X"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - X",
+                        "mnemonic": "X",
+                        "id": "open_subl_x"
+                    },
+                    {//Site - F ================================================
+                        "args": {
+                                    "site": "F"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - F",
+                        "mnemonic": "F",
+                        "id": "open_subl_f"
+                    },
+                    {//Site - E ================================================
+                        "args": {
+                                    "site": "E"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - E",
+                        "mnemonic": "E",
+                        "id": "open_subl_e"
+                    },
+                    {//Site - D ================================================
+                        "args": {
+                                    "site": "D"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - D",
+                        "mnemonic": "D",
+                        "id": "open_subl_d"
+                    },
+                    {//Site - C ================================================
+                        "args": {
+                                    "site": "C"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - C",
+                        "mnemonic": "C",
+                        "id": "open_subl_c"
+                    },
+                    {//Site - A ================================================
+                        "args": {
+                                    "site": "A"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - A",
+                        "mnemonic": "A",
+                        "id": "open_subl_a"
+                    },
+                    {//Site - N ================================================
+                        "args": {
+                                    "site": "N"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - N",
+                        "mnemonic": "N",
+                        "id": "open_subl_n"
+                    },
+                    {//Site - B ================================================
+                        "args": {
+                                    "site": "B"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - B",
+                        "mnemonic": "B",
+                        "id": "open_subl_b"
+                    }
+                ]
+            }//END SUB: OPEN SUBLWATCHER
         ],
         "id": "sublwatcher_menu",
         "mnemonic": "W"
