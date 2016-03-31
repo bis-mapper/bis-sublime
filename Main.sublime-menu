@@ -86,6 +86,24 @@
                         "mnemonic": "S",
                         "id": "register"
                     },
+                    {//BDT =====================================================
+                        "args": {
+                                    "text": "BDT"
+                                },
+                        "command": "app_current",
+                        "caption": "Build Define Table (BDT)",
+                        "mnemonic": "D",
+                        "id": "register"
+                    },
+                    {//BVT =====================================================
+                        "args": {
+                                    "text": "SBS"
+                                },
+                        "command": "app_current",
+                        "caption": "Build Variable Table (BVT)",
+                        "mnemonic": "V",
+                        "id": "register"
+                    },
                     { "caption": "-" },
                             {//DIFF - CURRENT SITE =============================
                                 "args": {
