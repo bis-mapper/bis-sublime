@@ -3,8 +3,8 @@
 call,HTMLTAGS_ textFieldTag_ (${1:<field>},${2:<value>},${3:<attr>}) .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>HTMLTAGS_ </tabTrigger>
+  <tabTrigger>HTMLTAGS_ textFieldTag_</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>textFieldTag_</description>
+  <description>Input</description>
 </snippet>
