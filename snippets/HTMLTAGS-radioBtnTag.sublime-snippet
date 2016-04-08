@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-call,NSSTMGMTAPI_ smRslt_ (${1:<sessionid>},${2:<report-id>},'RESTORE') .
+call,HTMLTAGS_ radioBtnTag_ (${1:<field>},${2:<value>},${3:<chk>},${4:<desc>},${5:<opts>}) .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>NSSTMGMTAPI_ smRslt_</tabTrigger>
+  <tabTrigger>HTMLTAGS_ </tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>Restore result</description>
+  <description>radioBtnTag_</description>
 </snippet>
