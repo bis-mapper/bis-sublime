@@ -97,7 +97,7 @@
                     },
                     {//BVT =====================================================
                         "args": {
-                                    "text": "SBS"
+                                    "text": "BVT"
                                 },
                         "command": "app_current",
                         "caption": "Build Variable Table (BVT)",
