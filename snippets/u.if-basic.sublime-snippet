@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+IF,${1:[O]} ${2:VAL1} ${3:OP} ${4:VAL2} ${5:STMT1} . ; ${6:STMT2} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>IF</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@IF - If Command BASIC</description>
+</snippet>

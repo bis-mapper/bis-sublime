@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+RTN,${1:RCAB},${2:RDRW},${3:RRPT}[,${4:RFMT}] ${5:CAB},${6:PWD},${7:DRW}[,${8:FMT}] .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>RTN</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@RTN - Return Remote Command</description>
+</snippet>

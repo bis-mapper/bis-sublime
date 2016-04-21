@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+IF,${1:[O]} ${2:VAL1} ${3:OP} ${4:VAL2},(${5:LABEL})[,${6:VAL3},(${7:LABEL})] . ; ${8:STMT1} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>IF</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@IF - If Command IF/GTO</description>
+</snippet>

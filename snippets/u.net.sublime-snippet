@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+NET,${1:NET-ID},${2:[SITE-ID]},${3:[RMU]},${4:[RMD]},${5:[RMPW]}${7:'/'${6:[NEWRMPW]}},${8:[TRNRPT]},,${9:[LAB]},${10:[CON?]},${11:[SLRQ]} ${12:[NERTXT]},${13:[NERCOD]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NET</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@NET - Network Sign-On Command</description>
+</snippet>

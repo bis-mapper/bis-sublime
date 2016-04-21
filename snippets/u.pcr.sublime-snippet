@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+PCR,${1:[CAB]},${2:[DRW]},${3:[RPT]},${4:[B?]},${5:[TLTLN?]},${6:[LAB]},${7:[OPT]} ${8:ONAME} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>PCR</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PCR - Transfer from PC Command</description>
+</snippet>

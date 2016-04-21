@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+CCI,${1:[LAB]} ${2:VCH},${3:METHOD} ${4:DT} ${5:ARG} ${6:[RTN]} ${7:[VMSG]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>CCI</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CCI - COM Client Invoke Method Command</description>
+</snippet>

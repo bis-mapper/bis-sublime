@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LFN,${1:[CAB]},${2:[DRW]},${3:[RPT]},${4:[TICS?]},${5:[LAB]} ${6:CC} ${7:V} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LFN</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LFN - Load Field Name Command</description>
+</snippet>

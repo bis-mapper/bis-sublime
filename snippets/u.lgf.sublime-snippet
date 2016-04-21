@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LGF,${1:[LAB]},${2:[RB?]},${3:[DB]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LGF</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LGF - Log Off Relational Database Command</description>
+</snippet>

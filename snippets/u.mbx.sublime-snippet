@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+MBX,${1:[BTYP]},${2:[ITYP]},${3:[CAPTION]} ${4:MESSAGE} ${5:CODE},(${6:LAB}) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>MBX</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@MBX - Define Message Box Command</description>
+</snippet>

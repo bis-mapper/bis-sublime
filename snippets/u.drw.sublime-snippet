@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+DRW,${1:CAB},${2:DRW},${3:[LAB]} ${4:[VCPL]},,,,${5:[VNXRD]},${6:[VHIRPTD]},${7:[VLND]},${8:[VRPTSD]},${9:[VRLMT]},${10:[VLLMT]},${11:[VRSLT]},${12:[VDRW]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>DRW</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DRW - Drawer Command</description>
+</snippet>

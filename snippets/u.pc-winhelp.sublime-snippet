@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+PC "WINHELP ${1:HELP-FILE} ${2:HELP-COMMAND} ${3:[PARAMETER]}" .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>PC</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PC - Run PC Program Command WINHELP</description>
+</snippet>

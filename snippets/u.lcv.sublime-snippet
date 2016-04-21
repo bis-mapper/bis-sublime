@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LCV,${1:[LAB]} ${2:OPTS} ${3:VARIABLE} ${4:TGTSTR}/${5:[REPLSTR]} ${6:[VPOS]},${7:[VOCCS]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LCV</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LCV - Locate and Change Variable Command</description>
+</snippet>

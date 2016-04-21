@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LLN,${1:CAB},${2:DRW},${3:RPT},${4:[LAB]} ${5:VLINES} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LLN</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LLN - Last Line Number Command</description>
+</snippet>

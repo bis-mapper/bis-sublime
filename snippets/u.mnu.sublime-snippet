@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+MNU,${1:TYPE},${2:[VWH]} ${3:KEYWORD},"${4:[LAB]}",${5:[O]},${6:[ACTION/VAL]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>MNU</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@MNU - Define Menu Bar Command</description>
+</snippet>

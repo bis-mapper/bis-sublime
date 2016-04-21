@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+REP[,${1:ICAB},${2:IDRW},${3:IRPT}],${4:RCAB},${5:RDRW},${6:RRPT}[,${7:RT}] [${8:TITLE}] .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>REP</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@REP - Replace Report Command</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+ADD,${1:ICAB},${2:IDRW},${3:IRPT},${4:RCAB},${5:RDRW},${6:RRPT}
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ADD</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@ADD - Add Results Command</description>
+</snippet>

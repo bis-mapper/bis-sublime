@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+CHG ${1:RW} ${2:V} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>CHG</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CHG - Change Variable Command REVERVED WORD</description>
+</snippet>

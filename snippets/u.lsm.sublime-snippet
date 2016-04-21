@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LSM,${1:MSGNO},${2:[LAB]} ${3:VMSG} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LSM</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LSM - Load System Message Command</description>
+</snippet>

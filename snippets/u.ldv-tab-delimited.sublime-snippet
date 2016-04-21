@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LDV,Q ${1:RV}=${2:IV},${3:N} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LDV</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LDV - Load Variable Command TAB DELIMITED</description>
+</snippet>

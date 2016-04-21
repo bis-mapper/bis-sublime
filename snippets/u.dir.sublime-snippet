@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+DIR,${1:[LAB]} ${2:NAME} ${3:[VCABINET]},${4:[VDRAWER]},${5:[VRPT]},${6:[VHIRPTR]},${7:[VSEC]},${8:[VRUN]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>DIR</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DIR - Directory Command</description>
+</snippet>
