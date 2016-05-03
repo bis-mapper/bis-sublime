@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-call,NSSTMGMTAPI_ getSS_ (${1:<name>},${2:<value}) .
+call,NSSTMGMTAPI_ getSS_ (${1:<name>},${2:<value>}) .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>NSSTMGMTAPI_ getSS_</tabTrigger>

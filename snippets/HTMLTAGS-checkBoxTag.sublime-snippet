@@ -1,10 +1,10 @@
 <snippet>
   <content><![CDATA[
-call,HTMLTAGS_ checkBoxTag_ (${1:<field>},${2:<value>},${3:<chk>},${4:<desc>},${5:<opts>}) .
+call,HTMLTAGS_ checkBoxTag_ (${1:<field>},${2:<value>},${3:<chk>},${4:<desc>},${5:<attr>}) .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
-  <tabTrigger>HTMLTAGS_ </tabTrigger>
+  <tabTrigger>HTMLTAGS_ checkBoxTag_</tabTrigger>
   <!-- Optional: Set a scope to limit where the snippet will trigger -->
   <scope>source.bis, source.BIS</scope>
-  <description>checkBoxTag_</description>
+  <description>Input</description>
 </snippet>
