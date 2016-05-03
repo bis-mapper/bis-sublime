@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+MSG,${1:[O]} ${2:VLD} ${3:[VRSP]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>MSG</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@MSG - Message to Console Command</description>
+</snippet>

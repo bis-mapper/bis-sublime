@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+FDR,${1:CAB},${2:DRW},${3:[RPT]},${4:[LINE]},${5:[Q]},${6:[LAB]} '${7:O}' ${8:CC} ${9:LTYP},${10:P} ${11:[VRPT]},${12:[VLNO]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>FDR</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@FDR - Find and Read Line Command</description>
+</snippet>

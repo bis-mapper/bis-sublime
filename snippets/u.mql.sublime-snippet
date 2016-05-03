@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+MQL,${1:[C]},${2:[D]},${3:[LAB]},${4:[O]},${5:[SKIP]},${6:[Q]},${7:[IB]},${8:[LTYP]},${9:[DSPFMT]},${10:[SBF]},${11:[DTCHAR]},${12:[WRAP]},${13:[INFO]},${14:[VERT]},${15:[ADJ]},\
+ ${16:[NCHAR]} '${17:SYNTAX}',${18:[SC]},${19:[SD]},${20:[SR]},${21:[SQLN]},${22:[SQ]} ${23:[VSTAT]},${24:[VCOL]},${25:[VRPT]},${26:[VSEL]},${27:[VSQ]},${28:[VINSRT]},\
+ ${29:[VIQ]},${30:[VDEL]},${31:[VDQ]},${32:[VUPD]},${33:[VUQ]},${34:[VCRE]},${35:[VCQ]},${36:[VDROP]},${37:[VDRQ]},${38:[VALT]},${39:[VALQ]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>MQL</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@MQL - Mapper Query Language Command</description>
+</snippet>

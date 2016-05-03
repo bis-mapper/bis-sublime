@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+ECR,${1:CAB},${2:DRW},${3:RPT},${4:KEY},${5:[HDGS?]},${6:[DSP?]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>ECR</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@ECR - Encode Report Command</description>
+</snippet>

@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+BLT,${1:CAB},${2:DRW},${3:RPT},${4:[LAB]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>BLT</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@BLT - Build Label Table Command</description>
+</snippet>

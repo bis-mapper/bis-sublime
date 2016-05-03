@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+MAU,${1:ICAB},${2:IDRW},${3:IRPT},${4:RCAB},${5:RDRW},${6:RRPT},${7:[LAB]} '${8:O}' ${9:ICC} ${10:ILTYP},${11:IP} ${12:RCC} ${13:RLTYP},${14:RP} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>MAU</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@MAU - Match Update Command</description>
+</snippet>

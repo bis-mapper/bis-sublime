@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+CAL,${1:CAB},${2:DRW},${3:RPT},${4:[L]},${5:[Q]},${6:[LAB]} '${7:O}' ${8:CC} ${9:LTYP},${10:P} ${11:EQ} ${12:[VRSLTS]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>CAL</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CAL - Calculate Command</description>
+</snippet>

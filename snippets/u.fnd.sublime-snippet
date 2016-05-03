@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+FND,${1:CAB},${2:DRW},${3:[RPT]},${4:[LINE]},${5:[LAB]} '${6:O}' ${7:CC} ${8:LTYP},${9:P} ${10:[VRPT]},${11:[VLNO]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>FND</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@FND - Find Command</description>
+</snippet>

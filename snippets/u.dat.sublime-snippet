@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+DAT,${1:CAB},${2:DRW},${3:RPT} '${4:O}' ${5:CC} ${6:LTYP},${7:P} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>DAT</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DAT - Date Command</description>
+</snippet>

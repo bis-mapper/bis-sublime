@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+PC,${1:[O]},${2:[LAB]} ${3:COMMAND} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>PC</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@PC - Run PC Program Command COMMAND</description>
+</snippet>

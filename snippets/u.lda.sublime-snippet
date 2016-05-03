@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LDA,${1:[O]} ${2:V}[${3:N}]=${4:VLD} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LDA</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LDA - Load Variable Array Command</description>
+</snippet>

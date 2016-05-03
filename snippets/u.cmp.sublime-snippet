@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+CMP,${1:CAB1},${2:DRW1},${3:RPT1},${4:[LIN1]},${5:CAB2},${6:DRW2},${7:RPT2},${8:[LIN2]},${9:[Q]},${10:[LABEL]} '${11:O}' ${12:CC1} ${13:LTYP1},${14:P1} ${15:CC2} ${16:LTYP2},${17:P2} ${18:[VLNO1]},${19:[VCOL1]},${20:[VLNO2]},${21:[VCOL2]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>CMP</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@CMP - Compare Data Command</description>
+</snippet>

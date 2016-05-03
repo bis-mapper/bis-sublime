@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+FIL,${1:CAB},${2:DRW},${3:RPT},${4:[MAPPERF?]},${5:[HDGS?]},${6:[LAB]} ${7:FILENAME} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>FIL</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@FIL - Create File Command</description>
+</snippet>

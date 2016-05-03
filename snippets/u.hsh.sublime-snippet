@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+HSH ${1:V}=${2:VLD},${3:MIN}-${4:MAX} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>HSH</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@hsh - Hash Command</description>
+</snippet>

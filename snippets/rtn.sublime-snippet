@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-rtn,${1:rcab},${2:rdrw},${3:rrpt}[,${4:rfmt}] ${5:cab},${6:pwd},${7:drw}[,${8:fmt}] .
+rtn,${1:rcab},${2:rdrw},${3:rrpt},${4:[rfmt]} ${5:cab},${6:pwd},${7:drw},${8:[fmt]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>rtn</tabTrigger>

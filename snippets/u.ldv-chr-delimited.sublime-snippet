@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LDV,Q ${1:RECEIVINGVARIABLE}=${2:ISSUINGVARIABLE},${3:N}(${4:DELIM}) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LDV</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LDV - Load Variable Command CHR DELIMITED</description>
+</snippet>

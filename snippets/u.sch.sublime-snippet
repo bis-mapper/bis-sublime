@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+SCH,${1:[DATE1]},${2:[TIME2]} ${3:RUNSTMT} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>SCH</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@SCH - Schedule Run Command</description>
+</snippet>

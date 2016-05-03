@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+TOT,${1:CAB},${2:DRW},${3:RPT} '${4:O}' ${5:CC} ${6:LTYP},${7:VAL} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>TOT</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@TOT - Totalize Command</description>
+</snippet>

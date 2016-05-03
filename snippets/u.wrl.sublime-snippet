@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+WRL,${1:CAB},${2:DRW},${3:RPT},${4:LINE},${5:[NTUID?]},${6:[WRITEPSW]},,${7:[READPSW]} ${8:CC} ${9:LTYP},${10:VAL} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>WRL</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@WRL - Write Line Command</description>
+</snippet>

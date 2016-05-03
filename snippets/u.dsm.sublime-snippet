@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+DSM,${1:CAB},${2:DRW},${3:RPT},${4:LMSG},${5:[TABP]},${6:[ERASE?]},${7:[INTERIM?]},${8:[PDQ]},${9:[DC]},${10:[DD]},${11:[DR]},${12:[DSPL]},${13:[DSPF]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>DSM</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@DSM - Display Message Command</description>
+</snippet>

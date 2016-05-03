@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+LNK,${1:[LAB]} ${2:SCRIPT},${3:[VLD]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LNK</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@LNK - Link to Another Script Command</description>
+</snippet>

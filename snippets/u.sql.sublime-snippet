@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+SQL,${1:[LAB]},${2:[EDSP?]},${3:[RCAB]},${4:[RDRW]},${5:[CSTAT]},${6:[DBNAME]} '${7:SYNTAX}',${8:[CAB]},${9:[DRW]},${10:[RPT]},${11:[SEL]},${12:[SQ]} ${13:VSTAT},${14:[VCOL]},${15:[VRETN]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>SQL</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@SQL - Submit SQL Command</description>
+</snippet>

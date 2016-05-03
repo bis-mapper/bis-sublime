@@ -1,0 +1,12 @@
+<snippet>
+  <content><![CDATA[
+FCH,${1:CAB},${2:DRW},${3:[LAB]},${4:[O]},${5:[ADJ]},${6:[SKIP]},${7:[Q]},${8:[EDSP?]},${9:[WRAP]},${10:[INFO]},${11:[VERT]},${12:[SORT]},\
+ ${13:[NCHAR]},${14:[DST]},${15:[SP]},${16:[DB]},${17:[FS]} '${18:ID} ${19:COL} ${20:TBL} ${21:[WHERE CLAUSE]}'\
+ ,${22:[C]},${23:[D]},${24:[R]},${25:[SEL]} ${26:[VSTAT]},${27:[VCOL]},${28:[VQTY]} .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>FCH</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>@FCH - Relational Aggregate Fetch Command</description>
+</snippet>
