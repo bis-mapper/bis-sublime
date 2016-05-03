@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-RLN[,${1:LINE},${2:LAB}] ${3:CC} ${4:DATA}
+RLN,${1:[LINE]},${2:[LAB]} ${3:CC} ${4:DATA} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>RLN</tabTrigger>

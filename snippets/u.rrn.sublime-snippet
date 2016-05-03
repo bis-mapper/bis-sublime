@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-RRN[,${1:LCAB},${2:LDRW},${3:LRPT}] ${4:RUN}[,${5:VLD}] ${6:SITE},${7:RUSER},${8:RDEPT}[,${9:RPWD},${10:RCAB},${11:RDRW}] .
+RRN,${1:[LCAB]},${2:[LDRW]},${3:[LRPT]} ${4:RUN},${5:[VLD]} ${6:SITE},${7:RUSER},${8:RDEPT},${9:[RPWD]},${10:[RCAB]},${11:[RDRW]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>RRN</tabTrigger>

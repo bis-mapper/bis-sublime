@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-rep[,${1:icab},${2:idrw},${3:irpt}],${4:rcab},${5:rdrw},${6:rrpt}[,${7:rt}] [${8:title}] .
+rep,${1:[icab]},${2:[idrw]},${3:[irpt]},${4:rcab},${5:rdrw},${6:rrpt},${7:[rt]} ${8:[title]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>rep</tabTrigger>

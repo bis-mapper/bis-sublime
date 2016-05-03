@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-RDC,${1:CAB},${2:DRW},${3:RPT}[,${4:LINE},${5:Q},${6:LTYP},${7:LAB},${8:CONTIN?}] ${9:CC} ${10:DATA} .
+RDC,${1:CAB},${2:DRW},${3:RPT},${4:[LINE]},${5:[Q]},${6:[LTYP]},${7[:LAB]},${8:[CONTIN?]} ${9:CC} <${10:DATA}> .
 <DATA>
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->

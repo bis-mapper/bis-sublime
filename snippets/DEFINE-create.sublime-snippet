@@ -1,7 +1,7 @@
 <snippet>
   <content><![CDATA[
 DEFINE ${1:NAME              }_ '${2:value                }' ${3:description                    } ${4:parent              }
-@.=====.NAME_==============.'value'================.description====================.parent==============.
+${5:@.=====.NAME_==============.'value'================.description====================.parent==============.}
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>DEFINE</tabTrigger>

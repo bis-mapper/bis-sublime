@@ -97,14 +97,14 @@
                     },
                     {//BVT =====================================================
                         "args": {
-                                    "text": "SBS"
+                                    "text": "BVT"
                                 },
                         "command": "app_current",
                         "caption": "Build Variable Table (BVT)",
                         "mnemonic": "V",
                         "id": "register"
                     },
-                    { "caption": "-" },
+                    { "caption": "-" },//---------------------------------------DIVIDER
                             {//DIFF - CURRENT SITE =============================
                                 "args": {
                                             "text": "DIFF"
@@ -159,6 +159,15 @@
                                 "mnemonic": "C",
                                 "id": "diff_c"
                             },
+                            {//DIFF - SITE T ===================================
+                                "args": {
+                                            "text": "DIFF -S T"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - T",
+                                "mnemonic": "T",
+                                "id": "diff_t"
+                            },
                             {//DIFF - SITE A ===================================
                                 "args": {
                                             "text": "DIFF -S A"
@@ -176,6 +185,15 @@
                                 "caption": "DIFF w/ Site - N",
                                 "mnemonic": "N",
                                 "id": "diff_n"
+                            },
+                            {//DIFF - SITE M ===================================
+                                "args": {
+                                            "text": "DIFF -S M"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - M",
+                                "mnemonic": "M",
+                                "id": "diff_m"
                             },
                             {//DIFF - SITE B ===================================
                                 "args": {
@@ -227,7 +245,7 @@
                         "mnemonic": "B",
                         "id": "build_current"
                     },
-                    { "caption": "-" },
+                    { "caption": "-" },//---------------------------------------DIVIDER
                     {//DEPLOY to X - CURRENT ===================================
                         "args": {
                                     "text": "DEPLOY -E THOR"
@@ -303,6 +321,7 @@
                         "mnemonic": "D",
                         "id": "open_subl_d"
                     },
+                    { "caption": "-" },//---------------------------------------DIVIDER
                     {//Site - C ================================================
                         "args": {
                                     "site": "C"
@@ -311,6 +330,15 @@
                         "caption": "Site - C",
                         "mnemonic": "C",
                         "id": "open_subl_c"
+                    },
+                    {//Site - T ================================================
+                        "args": {
+                                    "site": "T"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - T",
+                        "mnemonic": "T",
+                        "id": "open_subl_t"
                     },
                     {//Site - A ================================================
                         "args": {
@@ -321,6 +349,7 @@
                         "mnemonic": "A",
                         "id": "open_subl_a"
                     },
+                    { "caption": "-" },//---------------------------------------DIVIDER
                     {//Site - N ================================================
                         "args": {
                                     "site": "N"
@@ -329,6 +358,15 @@
                         "caption": "Site - N",
                         "mnemonic": "N",
                         "id": "open_subl_n"
+                    },
+                    {//Site - M ================================================
+                        "args": {
+                                    "site": "M"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - M",
+                        "mnemonic": "M",
+                        "id": "open_subl_m"
                     },
                     {//Site - B ================================================
                         "args": {

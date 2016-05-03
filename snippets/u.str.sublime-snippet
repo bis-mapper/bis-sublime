@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-STR,${1:CAB},${2:DRW},${3:RPT}[,${4:SITE},,${5:LOGON},${6:PSW}] .
+STR,${1:CAB},${2:DRW},${3:RPT},${4:[SITE]},,${5:[LOGON]},${6:[PSW]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>STR</tabTrigger>

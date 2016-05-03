@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-RNM[,${1:CAB},${2:DRW},${3:RPT}] -${4:N} .
+RNM,${1:[CAB]},${2:[DRW]},${3:[RPT]} -${4:N} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>RNM</tabTrigger>

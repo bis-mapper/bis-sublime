@@ -1,6 +1,6 @@
 <snippet>
   <content><![CDATA[
-ret,${1:cab},${2:drw}[,${3:mapperf?},${4:hdgs?},${5:lab}] ${6:file}[,${7:line},${8:ststr},${9:q},${10:ltyp}] .
+ret,${1:cab},${2:drw},${3:[mapperf?]},${4:[hdgs?]},${5:[lab]} ${6:file},${7:[line]},${8:[ststr]},${9:[q]},${10:[ltyp]} .
 ]]></content>
   <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
   <tabTrigger>ret</tabTrigger>
