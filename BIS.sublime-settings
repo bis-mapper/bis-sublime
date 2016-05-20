@@ -10,5 +10,8 @@
   "trim_trailing_white_space_on_save": true,
   "translate_tabs_to_spaces": true,
   "word_wrap": false,
-  "filename_filter": "(?i)\\.(bis|bhtml|run|txt|inf)$"
+  "filename_filter": "(?i)\\.(bis|bhtml|run|txt|inf)$",
+  "default_encoding": "Windows 1252",
+  "fallback_encoding": "Windows 1252",
+  "show_encoding": true
 }

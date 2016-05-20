@@ -268,7 +268,7 @@ def deploy_conf(text):
         elif dirtquote == 2:
             quote = "\"Life's a garden, dig it.\"\n ~Joe Dirt, Joe Dirt\n\n\n"
         elif dirtquote == 3:
-            quote = "\"People say Joe Dirt's a weird name, and how cool am I., Joe Dirt\"\n ~Joe Dirt\n\n\n"
+            quote = "\"People say Joe Dirt's a weird name, and how cool am I.\"\n ~Joe Dirt, Joe Dirt\n\n\n"
         elif dirtquote == 3:
             quote = "\"Luckily, my neck broke my fall.\"\n ~Joe Dirt, Joe Dirt\n\n\n"
         elif dirtquote == 4:
