@@ -160,7 +160,7 @@ class AppCurrentCommand(sublime_plugin.TextCommand):
         # Create File TEXT
         chg_text = "BisCmd" + "," + file_name + "," + "input" + "," + text      #DEFAULT!
         if statpage == True:
-            if text[:6].upper() == "DEPLOY" or text[:6].upper() == "EXPORT":
+            if text[:6].upper() == "DEPLOY" or text[:6].upper() == "EXPORT" or text[:5].upper() =="BUILD":
                 chg_text = "BisCmd" + "," + file_name + "," + "input" + "," + text + ",STATUS," + appname
             else:
                 sublime.error_message(text + "\ncannot be used on the status screen! [ yet? ;) ]")
