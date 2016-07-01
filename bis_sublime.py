@@ -24,8 +24,6 @@ from winreg import *
 #   GLOBALS + DO ONCE
 with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF', 'a+') as f:
     f.readline()
-with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF', 'a+') as f:
-    f.readline()
 #===============================================================================
 #
 #===============================================================================
@@ -83,22 +81,19 @@ class BisCheckMapper(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
         #Needed Variables
+        windowSettings = sublime.active_window().settings()
         global_settings = sublime.load_settings('BIS.sublime-settings')
         focus_filter = global_settings.get('focus_filter', '.*')
         verify_path = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF'
-        verify_last = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF'
+        verify_last = windowSettings.get('verify_last')
+        if verify_last == None:
+            verify_last = 'NONE'
+            windowSettings.set('verify_last',verify_last)
         file_name = view.file_name()
-        #
-        with open(verify_last, 'r+') as f:
-            last_file = f.readline().strip()
-            f.seek(0)
-            if file_name != None:
-                f.write(file_name)
-                f.truncate()
         #
         if file_name != None:
             if re.search(focus_filter, file_name) != None:
-                if file_name != last_file:
+                if file_name != verify_last:
 
                     # Capture line2 of the page to determine if Status Page
                     statline, statpage = get_statpage(view)
@@ -116,6 +111,8 @@ class BisCheckMapper(sublime_plugin.EventListener):
                     # Move Cursor into view and Show Message
                     view.show_at_center(view.sel()[0].begin())
                     sublime.set_timeout(lambda: mapper_window_status(view), 1250)
+
+        windowSettings.set('verify_last',file_name)
 
 def mapper_window_status(view):
     with open(verify_path) as f:
