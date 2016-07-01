@@ -20,6 +20,18 @@ from getpass import getuser
 from shutil import copyfile
 from random import randint
 from winreg import *
+#
+#   GLOBALS + DO ONCE
+global_settings = sublime.load_settings('BIS.sublime-settings')
+filename_filter = global_settings.get('focus_filter', '.*')
+#
+verify_path = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF'
+with open(verify_path, 'a+') as f:
+    f.readline()
+#
+verify_last = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF'
+with open(verify_last, 'a+') as f:
+    f.readline()
 #===============================================================================
 #
 #===============================================================================
@@ -61,6 +73,55 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Write file save to site
         chg_text = "modified" + "," + file_name + ", file, BisSaveBuild," + self.dt[:8] + "," + self.dt[9:]
         write_file(file_path,chg_text)
+#===============================================================================
+#
+#===============================================================================
+#
+#  #####   ###    ####  #   #  #####
+#  #      #   #  #      #   #  #
+#  #####  #   #  #      #   #  #####
+#  #      #   #  #      #   #      #
+#  #       ###    ####   ###   #####
+#
+#===============================================================================
+#   Do task on focus
+class BisCheckMapper(sublime_plugin.EventListener):
+
+    def on_activated_async(self, view):
+        file_name = view.file_name()
+        with open(verify_last, 'r+') as f:
+            last_file = f.readline().strip()
+            f.seek(0)
+            if file_name != None:
+                f.write(file_name)
+                f.truncate()
+
+        if re.search(filename_filter, file_name) != None:
+            if file_name != last_file:
+
+                # Capture line2 of the page to determine if Status Page
+                statline, statpage = get_statpage(view)
+
+                # Get User variables
+                appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
+
+                # Get Path
+                file_path = get_file_path(site,appdata,app)
+
+                # Write file save to site
+                chg_text = "verify" + "," + file_name + ", file, BisSaveBuild"
+                write_file(file_path,chg_text)
+
+                # Move Cursor into view and Show Message
+                view.show_at_center(view.sel()[0].begin())
+                sublime.set_timeout(lambda: mapper_window_status(view), 1000)
+
+def mapper_window_status(view):
+    with open(verify_path) as f:
+        message = f.readline().strip()
+        view.set_status('derp', message)
+        message = message.replace('][',']<br>[')
+        view.show_popup('<div>'+message+'</div>')
 #===============================================================================
 #
 #===============================================================================
