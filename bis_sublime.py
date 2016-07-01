@@ -22,15 +22,9 @@ from random import randint
 from winreg import *
 #
 #   GLOBALS + DO ONCE
-global_settings = sublime.load_settings('BIS.sublime-settings')
-filename_filter = global_settings.get('focus_filter', '.*')
-#
-verify_path = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF'
-with open(verify_path, 'a+') as f:
+with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF', 'a+') as f:
     f.readline()
-#
-verify_last = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF'
-with open(verify_last, 'a+') as f:
+with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF', 'a+') as f:
     f.readline()
 #===============================================================================
 #
@@ -88,33 +82,40 @@ class BisSaveBuild(sublime_plugin.EventListener):
 class BisCheckMapper(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
+        #Needed Variables
+        global_settings = sublime.load_settings('BIS.sublime-settings')
+        focus_filter = global_settings.get('focus_filter', '.*')
+        verify_path = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF'
+        verify_last = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY_LAST.INF'
         file_name = view.file_name()
+        #
         with open(verify_last, 'r+') as f:
             last_file = f.readline().strip()
             f.seek(0)
             if file_name != None:
                 f.write(file_name)
                 f.truncate()
+        #
+        if file_name != None:
+            if re.search(focus_filter, file_name) != None:
+                if file_name != last_file:
 
-        if re.search(filename_filter, file_name) != None:
-            if file_name != last_file:
+                    # Capture line2 of the page to determine if Status Page
+                    statline, statpage = get_statpage(view)
 
-                # Capture line2 of the page to determine if Status Page
-                statline, statpage = get_statpage(view)
+                    # Get User variables
+                    appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
 
-                # Get User variables
-                appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
+                    # Get Path
+                    file_path = get_file_path(site,appdata,app)
 
-                # Get Path
-                file_path = get_file_path(site,appdata,app)
+                    # Write file save to site
+                    chg_text = "verify" + "," + file_name + ", file, BisSaveBuild"
+                    write_file(file_path,chg_text)
 
-                # Write file save to site
-                chg_text = "verify" + "," + file_name + ", file, BisSaveBuild"
-                write_file(file_path,chg_text)
-
-                # Move Cursor into view and Show Message
-                view.show_at_center(view.sel()[0].begin())
-                sublime.set_timeout(lambda: mapper_window_status(view), 1000)
+                    # Move Cursor into view and Show Message
+                    view.show_at_center(view.sel()[0].begin())
+                    sublime.set_timeout(lambda: mapper_window_status(view), 1250)
 
 def mapper_window_status(view):
     with open(verify_path) as f:
