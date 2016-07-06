@@ -20,6 +20,7 @@ from getpass import getuser
 from shutil import copyfile
 from random import randint
 from winreg import *
+import requests
 #
 #   GLOBALS + DO ONCE
 with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF', 'a+') as f:
@@ -65,6 +66,8 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Write file save to site
         chg_text = "modified" + "," + file_name + ", file, BisSaveBuild," + self.dt[:8] + "," + self.dt[9:]
         write_file(file_path,chg_text)
+
+        sublime.active_window().settings().set('verify_last','SAVED')
 #===============================================================================
 #
 #===============================================================================
@@ -80,46 +83,35 @@ class BisSaveBuild(sublime_plugin.EventListener):
 class BisCheckMapper(sublime_plugin.EventListener):
 
     def on_activated_async(self, view):
-        #Needed Variables
-        windowSettings = sublime.active_window().settings()
-        global_settings = sublime.load_settings('BIS.sublime-settings')
-        focus_filter = global_settings.get('focus_filter', '.*')
-        verify_path = os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF'
-        verify_last = windowSettings.get('verify_last')
-        if verify_last == None:
-            verify_last = 'NONE'
-            windowSettings.set('verify_last',verify_last)
-        file_name = view.file_name()
-        #
-        if file_name != None:
-            if re.search(focus_filter, file_name) != None:
-                if file_name != verify_last:
+        mapper_status(view)
 
-                    # Capture line2 of the page to determine if Status Page
-                    statline, statpage = get_statpage(view)
-
-                    # Get User variables
-                    appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
-
-                    # Get Path
-                    file_path = get_file_path(site,appdata,app)
-
-                    # Write file save to site
-                    chg_text = "verify" + "," + file_name + ", file, BisSaveBuild"
-                    write_file(file_path,chg_text)
-
-                    # Move Cursor into view and Show Message
-                    view.show_at_center(view.sel()[0].begin())
-                    sublime.set_timeout(lambda: mapper_window_status(view), 1250)
-
-        windowSettings.set('verify_last',file_name)
-
-def mapper_window_status(view):
-    with open(verify_path) as f:
-        message = f.readline().strip()
-        view.set_status('derp', message)
-        message = message.replace('][',']<br>[')
-        view.show_popup('<div>'+message+'</div>')
+def mapper_status(view):
+    #Needed Variables
+    windowSettings = sublime.active_window().settings()
+    global_settings = sublime.load_settings('BIS.sublime-settings')
+    focus_filter = global_settings.get('focus_filter', '.*')
+    verify_last = windowSettings.get('verify_last')
+    if verify_last == None:
+        verify_last = 'NONE'
+        windowSettings.set('verify_last',verify_last)
+    file_name = view.file_name()
+    #
+    if file_name != None:
+        if re.search(focus_filter, file_name) != None:
+            if file_name != verify_last:
+                #
+                totalLines = len(view.lines(sublime.Region(0, view.size()))) + 1
+                pos = file_name.find('site-')
+                sl = file_name[pos+5].upper()
+                #
+                url = 'http://quotedev.nstarco.com/public/default.asp?Category=ICEMONITOR&Service=SUBLIMEAJAX'
+                data = dict(file=file_name,lines=totalLines,site=sl)
+                r = requests.post(url, data=data, allow_redirects=True)
+                response = r.content.strip().decode("utf-8")
+                sPos = response.find('[STATUS]')
+                view.show_popup(response[8:sPos], location=view.visible_region().begin(), max_width=1000)
+                view.set_status('derp', response[sPos+8:])
+    windowSettings.set('verify_last',file_name)
 #===============================================================================
 #
 #===============================================================================
