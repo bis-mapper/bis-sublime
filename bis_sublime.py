@@ -21,10 +21,6 @@ from shutil import copyfile
 from random import randint
 from winreg import *
 import requests
-#
-#   GLOBALS + DO ONCE
-with open(os.environ['USERPROFILE'] + '\\sublwatcher\\VERIFY.INF', 'a+') as f:
-    f.readline()
 #===============================================================================
 #
 #===============================================================================
@@ -66,8 +62,6 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Write file save to site
         chg_text = "modified" + "," + file_name + ", file, BisSaveBuild," + self.dt[:8] + "," + self.dt[9:]
         write_file(file_path,chg_text)
-
-        sublime.active_window().settings().set('verify_last','SAVED')
 #===============================================================================
 #
 #===============================================================================
@@ -90,15 +84,12 @@ def mapper_status(view):
     windowSettings = sublime.active_window().settings()
     global_settings = sublime.load_settings('BIS.sublime-settings')
     focus_filter = global_settings.get('focus_filter', '.*')
-    verify_last = windowSettings.get('verify_last')
-    if verify_last == None:
-        verify_last = 'NONE'
-        windowSettings.set('verify_last',verify_last)
+    last_view = windowSettings.get('last_view')
     file_name = view.file_name()
     #
     if file_name != None:
         if re.search(focus_filter, file_name) != None:
-            if file_name != verify_last:
+            if view.id() != last_view:
                 #
                 totalLines = len(view.lines(sublime.Region(0, view.size()))) + 1
                 pos = file_name.find('site-')
@@ -111,7 +102,7 @@ def mapper_status(view):
                 sPos = response.find('[STATUS]')
                 view.show_popup(response[8:sPos], location=view.visible_region().begin(), max_width=1000)
                 view.set_status('derp', response[sPos+8:])
-    windowSettings.set('verify_last',file_name)
+                windowSettings.set('last_view',view.id())
 #===============================================================================
 #
 #===============================================================================
