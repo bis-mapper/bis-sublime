@@ -20,7 +20,6 @@ from getpass import getuser
 from shutil import copyfile
 from random import randint
 from winreg import *
-import requests
 #===============================================================================
 #
 #===============================================================================
@@ -55,6 +54,8 @@ class BisSaveBuild(sublime_plugin.EventListener):
 
         # Get User variables
         appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
+        if site.upper() == 'S':
+            return
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
@@ -80,6 +81,7 @@ class BisCheckMapper(sublime_plugin.EventListener):
         mapper_status(view)
 
 def mapper_status(view):
+    import requests
     #Needed Variables
     windowSettings = sublime.active_window().settings()
     global_settings = sublime.load_settings('BIS.sublime-settings')
@@ -376,7 +378,6 @@ def get_user_vars(statline,statpage,global_settings,cur_view):
         pos = file_name.find('site-')
         pos = pos + 5
         site = file_name[pos]
-
     return appdata, app, appname, file_name, site
 #===============================================================================
 #
