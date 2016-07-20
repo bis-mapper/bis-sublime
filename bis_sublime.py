@@ -16,6 +16,8 @@ import sys
 import datetime
 import subprocess
 import threading
+import http.client
+import urllib
 from getpass import getuser
 from shutil import copyfile
 from random import randint
@@ -91,23 +93,21 @@ def mapper_status(view):
     if file_name != None:
         if re.search(focus_filter, file_name) != None:
             if view.id() != last_view:
-                try:
-                    import requests
                     #
                     totalLines = len(view.lines(sublime.Region(0, view.size()))) + 1
                     pos = file_name.find('site-')
                     sl = file_name[pos+5].upper()
                     #
-                    url = 'http://quotedev.nstarco.com/public/default.asp?Category=ICEMONITOR&Service=SUBLIMEAJAX'
-                    data = dict(file=file_name,lines=totalLines,site=sl)
-                    r = requests.post(url, data=data, allow_redirects=True)
-                    response = r.content.strip().decode("utf-8")
+                    connection = http.client.HTTPSConnection('quotedev.nstarco.com')
+                    headers = {'Content-type': 'application/x-www-form-urlencoded'}
+                    data = urllib.parse.urlencode({'file': file_name, 'lines': totalLines, 'site': sl})
+                    connection.request('POST','/public/default.asp?Category=ICEMONITOR&Service=SUBLIMEAJAX', data, headers)
+                    response = connection.getresponse().read().strip().decode("utf-8")
+                    connection.close()
+                    #
                     sPos = response.find('[STATUS]')
                     view.show_popup(response[8:sPos], location=view.visible_region().begin(), max_width=1000)
                     view.set_status('derp', response[sPos+8:])
-                    windowSettings.set('last_view',view.id())
-                except ImportError:
-                    print('Focus error, try installing requests module for python')
                     windowSettings.set('last_view',view.id())
 #===============================================================================
 #
