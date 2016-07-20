@@ -108,6 +108,7 @@ def mapper_status(view):
                     windowSettings.set('last_view',view.id())
                 except ImportError:
                     print('Focus error, try installing requests module for python')
+                    windowSettings.set('last_view',view.id())
 #===============================================================================
 #
 #===============================================================================
