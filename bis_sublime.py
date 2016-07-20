@@ -54,6 +54,8 @@ class BisSaveBuild(sublime_plugin.EventListener):
 
         # Get User variables
         appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
+        if site.upper() == 'S':
+            return
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
@@ -61,6 +63,48 @@ class BisSaveBuild(sublime_plugin.EventListener):
         # Write file save to site
         chg_text = "modified" + "," + file_name + ", file, BisSaveBuild," + self.dt[:8] + "," + self.dt[9:]
         write_file(file_path,chg_text)
+#===============================================================================
+#
+#===============================================================================
+#
+#  #####   ###    ####  #   #  #####
+#  #      #   #  #      #   #  #
+#  #####  #   #  #      #   #  #####
+#  #      #   #  #      #   #      #
+#  #       ###    ####   ###   #####
+#
+#===============================================================================
+#   Do task on focus
+class BisCheckMapper(sublime_plugin.EventListener):
+
+    def on_activated_async(self, view):
+        mapper_status(view)
+
+def mapper_status(view):
+    import requests
+    #Needed Variables
+    windowSettings = sublime.active_window().settings()
+    global_settings = sublime.load_settings('BIS.sublime-settings')
+    focus_filter = global_settings.get('focus_filter', '.*')
+    last_view = windowSettings.get('last_view')
+    file_name = view.file_name()
+    #
+    if file_name != None:
+        if re.search(focus_filter, file_name) != None:
+            if view.id() != last_view:
+                #
+                totalLines = len(view.lines(sublime.Region(0, view.size()))) + 1
+                pos = file_name.find('site-')
+                sl = file_name[pos+5].upper()
+                #
+                url = 'http://quotedev.nstarco.com/public/default.asp?Category=ICEMONITOR&Service=SUBLIMEAJAX'
+                data = dict(file=file_name,lines=totalLines,site=sl)
+                r = requests.post(url, data=data, allow_redirects=True)
+                response = r.content.strip().decode("utf-8")
+                sPos = response.find('[STATUS]')
+                view.show_popup(response[8:sPos], location=view.visible_region().begin(), max_width=1000)
+                view.set_status('derp', response[sPos+8:])
+                windowSettings.set('last_view',view.id())
 #===============================================================================
 #
 #===============================================================================
@@ -334,7 +378,6 @@ def get_user_vars(statline,statpage,global_settings,cur_view):
         pos = file_name.find('site-')
         pos = pos + 5
         site = file_name[pos]
-
     return appdata, app, appname, file_name, site
 #===============================================================================
 #
