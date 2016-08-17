@@ -57,8 +57,6 @@ class BisSaveBuild(sublime_plugin.EventListener):
 
         # Get User variables
         appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
-        if site.upper() == 'S':
-            return
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
