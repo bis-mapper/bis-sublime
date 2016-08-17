@@ -122,15 +122,13 @@ def mapper_status(view):
 class GitRevertFileCommand(sublime_plugin.WindowCommand):
     def run(self):
         filename = ntpath.basename(self.window.active_view().file_name())
-        revertcmd = "checkout "+filename
-
 
         # Check if sure: yes? confirm, no? continue
         dorevert = sublime.ok_cancel_dialog("Are you sure you want to clean changes in '"+filename+"'?\n\n This action is irreversible!","Continue")
         if dorevert == False:
             return
 
-        self.window.run_command("git_custom",{"cmd": revertcmd,"output":None})
+        self.window.run_command("git_checkout_current_file")
 #===============================================================================
 #
 #===============================================================================
