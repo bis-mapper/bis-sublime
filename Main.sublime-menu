@@ -482,6 +482,12 @@
                 "command": "git_pull",
                 "mnemonic": "l",
                 "id": "git pull"
+            },
+            {
+                "caption": "Clean File(Revert changes)",
+                "command": "git_revert_file",
+                "mnemonic": "R",
+                "id": "git revert"
             }
         ],
         "id": "git_menu",

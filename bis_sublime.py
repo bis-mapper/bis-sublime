@@ -18,6 +18,7 @@ import subprocess
 import threading
 import http.client
 import urllib
+import ntpath
 from getpass import getuser
 from shutil import copyfile
 from random import randint
@@ -56,8 +57,6 @@ class BisSaveBuild(sublime_plugin.EventListener):
 
         # Get User variables
         appdata, app, appname, file_name, site = get_user_vars(statline,statpage,global_settings,view)
-        if site.upper() == 'S':
-            return
 
         # Get Path
         file_path = get_file_path(site,appdata,app)
@@ -109,6 +108,29 @@ def mapper_status(view):
                     view.show_popup(response[8:sPos], location=view.visible_region().begin(), max_width=1000)
                     view.set_status('derp', response[sPos+8:])
                     windowSettings.set('last_view',view.id())
+#===============================================================================
+#
+#===============================================================================
+#
+#  ####   #####  #   #  #####  ####   #####
+#  #   #  #      #   #  #      #   #    #
+#  ####   ####   #   #  ####   ####     #
+#  #  #   #       # #   #      #  #     #
+#  #   #  #####    #    #####  #   #    #
+#
+#===============================================================================
+class GitRevertFileCommand(sublime_plugin.WindowCommand):
+    def run(self):
+        filename = ntpath.basename(self.window.active_view().file_name())
+        revertcmd = "checkout "+filename
+
+
+        # Check if sure: yes? confirm, no? continue
+        dorevert = sublime.ok_cancel_dialog("Are you sure you want to clean changes in '"+filename+"'?\n\n This action is irreversible!","Continue")
+        if dorevert == False:
+            return
+
+        self.window.run_command("git_custom",{"cmd": revertcmd,"output":None})
 #===============================================================================
 #
 #===============================================================================
