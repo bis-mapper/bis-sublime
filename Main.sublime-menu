@@ -150,6 +150,15 @@
                                 "mnemonic": "D",
                                 "id": "diff_d"
                             },
+                            {//DIFF - SITE S ===================================
+                                "args": {
+                                            "text": "DIFF -S S"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - S",
+                                "mnemonic": "S",
+                                "id": "diff_s"
+                            },
                             {//DIFF - SITE C ===================================
                                 "args": {
                                             "text": "DIFF -S C"
@@ -322,6 +331,15 @@
                         "id": "open_subl_d"
                     },
                     { "caption": "-" },//---------------------------------------DIVIDER
+                    {//Site - S ================================================
+                        "args": {
+                                    "site": "S"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - S",
+                        "mnemonic": "S",
+                        "id": "open_subl_s"
+                    },
                     {//Site - C ================================================
                         "args": {
                                     "site": "C"
