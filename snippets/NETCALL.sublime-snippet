@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+call,NETCALL_ 0001 (${1:<site>},'','','',<status>h1,<netmsg>s80) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NETCALL_</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>NETCALL_ @net to remote site</description>
+</snippet>
