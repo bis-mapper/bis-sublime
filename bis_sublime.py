@@ -166,12 +166,13 @@ class OpenSublwatcherCommand(sublime_plugin.TextCommand):
     def run(self, edit, site):
         aReg = ConnectRegistry(None,HKEY_LOCAL_MACHINE)
         aKey = OpenKey(aReg, r"SOFTWARE\Wow6432Node\Unisys\BIS Clients")
-        try:
-            MPCVer=QueryValueEx(aKey, "GIBIS")
-        except EnvironmentError:
-            MPCVer=['5.4','MPCVer-DEFAULT']
+        # try:
+        #     MPCVer=QueryValueEx(aKey, "GIBIS")
+        # except EnvironmentError:
+        MPCVer=['5.5','MPCVer-DEFAULT']
 
         appdata = os.environ['appdata']
+        print(MPCVer)
         dst1 = appdata+'\\Unisys\\Clients\\MPC'+MPCVer[0]+'\\Scripts\\SITE-'+site+'-SUBLWATCHER.ATR'
         if not os.path.exists(dst1):
             src1 = 'S:\\SUBLWATCHER_SCRIPTS\\SITE-'+site+'-SUBLWATCHER.ATR'
