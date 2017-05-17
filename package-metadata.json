@@ -1,1 +1,5 @@
-{"url": "https://github.com/bis-mapper/bis-sublime", "version": "2017.05.15.17.00.00", "description": "BIS/MAPPER Syntax bundle and utilities"}
+{
+  "description": "BIS/MAPPER Syntax bundle and utilities",
+  "url": "https://github.com/bis-mapper/bis-sublime",
+  "version": "2017.05.17.17.00.00"
+}
