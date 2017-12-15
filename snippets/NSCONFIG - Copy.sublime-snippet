@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+call,NSGANALYTICS_ 0001 (<*Category>,<*Service>,<*GAspAlsDir>,<*GRemoteAddr>) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>NSGANALYTICS_ </tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Loads Google Analytics</description>
+</snippet>
