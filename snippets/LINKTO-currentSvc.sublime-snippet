@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+ldv,p <params>s256 .
+call,LINKTO_ currentSvc_ (${1:<params>}, ${2:<url>s256}}) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LINKTO_ currentSvc_</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Generates url to current service</description>
+</snippet>

@@ -1,0 +1,11 @@
+<snippet>
+  <content><![CDATA[
+ldv,p <params> .
+call,LINKTO_ currentCat_ (${1:<service>}, ${2:<params>}, ${3:<url>s256}}) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>LINKTO_ currentCat_</tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Generate url to service in current category</description>
+</snippet>

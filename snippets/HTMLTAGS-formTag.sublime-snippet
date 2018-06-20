@@ -1,0 +1,10 @@
+<snippet>
+  <content><![CDATA[
+call,HTMLTAGS_ formTag_ (${1:<model>},${2:<action>},${3:<attr>}) .
+]]></content>
+  <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+  <tabTrigger>HTMLTAGS_ formField_ </tabTrigger>
+  <!-- Optional: Set a scope to limit where the snippet will trigger -->
+  <scope>source.bis, source.BIS</scope>
+  <description>Start the HTML form for a given model</description>
+</snippet>
