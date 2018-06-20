@@ -71,6 +71,14 @@
             }
         },
         {
+            "name": "Variable XSS",
+            "scope": "variable.xss",
+            "settings": {
+                "fontStyle": "",
+                "foreground": "#E07DCD"
+            }
+        },
+        {
             "name": "Block Parameter",
             "scope": "variable.other.block",
             "settings": {

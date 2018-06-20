@@ -21,6 +21,9 @@
             "include": "#ice-tags"
         },
         {
+            "include": "#ice-vars-xss"
+        },
+        {
             "include": "#variables"
         },
         {
@@ -216,6 +219,9 @@
                 {
                     "match": "('.*?')",
                     "name": "string.quoted.single.bis"
+                },
+                {
+                    "include": "#ice-vars-xss"
                 }
             ]
         },
@@ -263,6 +269,60 @@
             "end": "%>",
             "name": "variable.other.bis"
         },
+        "ice-vars-xss": {
+            "patterns": [
+                {
+                    "begin": "<A%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%A>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<H%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%H>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<J%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%J>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<C%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%C>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<U%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%U>",
+                    "name": "variable.xss.bis"
+                }
+            ]
+        },
         "ice-tags": {
             "patterns": [
                 {
@@ -274,6 +334,56 @@
                     },
                     "end": "%>",
                     "name": "variable.other.bis"
+                },
+                {
+                    "begin": "<A%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%A>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<H%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%H>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<J%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%J>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<C%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%C>",
+                    "name": "variable.xss.bis"
+                },
+                {
+                    "begin": "<U%",
+                    "captures": {
+                        "0": {
+                            "name": "variable.xss.bis"
+                        }
+                    },
+                    "end": "%U>",
+                    "name": "variable.xss.bis"
                 },
                 {
                     "begin": "(?:^\\s+)?(<)((?i:script))\\b(?![^>]*/>)",
@@ -293,6 +403,9 @@
                     },
                     "name": "source.js.embedded.html",
                     "patterns": [
+                        {
+                            "include": "#ice-vars-xss"
+                        },
                         {
                             "include": "#ice-vars"
                         },
@@ -331,6 +444,9 @@
                                     "name": "comment.block.js"
                                 },
                                 {
+                                    "include": "#ice-vars-xss"
+                                },
+                                {
                                     "include": "$self"
                                 },
                                 {
@@ -361,6 +477,9 @@
                             "name": "meta.tag.block.any.html",
                             "patterns": [
                                 {
+                                    "include": "#ice-vars-xss"
+                                },
+                                {
                                     "include": "#tag-stuff"
                                 }
                             ]
@@ -383,6 +502,9 @@
                             },
                             "name": "meta.tag.inline.any.html",
                             "patterns": [
+                                {
+                                    "include": "#ice-vars-xss"
+                                },
                                 {
                                     "include": "#tag-stuff"
                                 }
@@ -537,6 +659,9 @@
                 },
                 {
                     "include": "#ice-vars"
+                },
+                {
+                    "include": "#ice-vars-xss"
                 }
             ]
         },
@@ -560,6 +685,9 @@
                 },
                 {
                     "include": "#ice-vars"
+                },
+                {
+                    "include": "#ice-vars-xss"
                 }
             ]
         },

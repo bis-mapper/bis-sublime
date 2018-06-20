@@ -120,6 +120,19 @@
 		</dict>
 		<dict>
 			<key>name</key>
+			<string>Variable XSS</string>
+			<key>scope</key>
+			<string>variable.xss</string>
+			<key>settings</key>
+			<dict>
+				<key>fontStyle</key>
+				<string></string>
+				<key>foreground</key>
+				<string>#E07DCD</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
 			<string>Block Parameter</string>
 			<key>scope</key>
 			<string>variable.other.block</string>
