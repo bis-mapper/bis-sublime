@@ -213,6 +213,15 @@
                                 "mnemonic": "B",
                                 "id": "diff_b"
                             },
+                            {//DIFF - SITE R ===================================
+                                "args": {
+                                            "text": "DIFF -S R"
+                                        },
+                                "command": "app_current",
+                                "caption": "DIFF w/ Site - R",
+                                "mnemonic": "R",
+                                "id": "diff_r"
+                            },
                             {//DIFF - OTHER REPORT - CURRENT SITE ==============
                                 "args": {
                                             "site": "CURRENT"
@@ -394,6 +403,15 @@
                         "caption": "Site - B",
                         "mnemonic": "B",
                         "id": "open_subl_b"
+                    },
+                    {//Site - B ================================================
+                        "args": {
+                                    "site": "R"
+                                },
+                        "command": "open_sublwatcher",
+                        "caption": "Site - R",
+                        "mnemonic": "R",
+                        "id": "open_subl_r"
                     }
                 ]
             }//END SUB: OPEN SUBLWATCHER
