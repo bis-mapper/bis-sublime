@@ -169,7 +169,7 @@ class OpenSublwatcherCommand(sublime_plugin.TextCommand):
         # try:
         #     MPCVer=QueryValueEx(aKey, "GIBIS")
         # except EnvironmentError:
-        MPCVer=['5.5','MPCVer-DEFAULT']
+        MPCVer=['6.0','5.5','MPCVer-DEFAULT']
 
         appdata = os.environ['appdata']
         print(MPCVer)
